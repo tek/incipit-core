@@ -62,6 +62,7 @@ library
     , Data.Text
     , Data.Text.IO
     , Data.Text.Lazy
+    , Data.Text.Lazy.Builder
     , Data.Text.Lazy.IO
     , Data.Text.Read
     , Data.Tree
