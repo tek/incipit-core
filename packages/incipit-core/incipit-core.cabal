@@ -5,7 +5,7 @@ cabal-version: 2.2
 -- see: https://github.com/sol/hpack
 
 name:           incipit-core
-version:        0.1.0.1
+version:        0.1.0.2
 synopsis:       A Prelude for Polysemy
 description:    See <https://hackage.haskell.org/package/incipit/docs/Incipit.html>
 category:       Prelude
@@ -120,7 +120,7 @@ library
   ghc-options: -Wall -Wredundant-constraints -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Widentities
   build-depends:
       base ==4.*
-    , incipit-base >=0.1.0.1
+    , incipit-base >=0.1.0.2
     , polysemy >=1.6
   mixins:
       base hiding (Prelude)
