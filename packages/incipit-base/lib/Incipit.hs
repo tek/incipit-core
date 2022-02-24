@@ -6,7 +6,7 @@
 --
 -- Aside from a few additional names from @base@, this module also exports the string system from
 -- [relude](https://hackage.haskell.org/package/relude), some tracing functions, and a small set of other combinators.
-module Incipit.Prelude (
+module Incipit (
   module Incipit.Base,
   module Incipit.Debug,
   module Incipit.Either,

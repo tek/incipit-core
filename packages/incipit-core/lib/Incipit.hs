@@ -1,7 +1,7 @@
 -- |This is the central module on which to build upon when constructing Preludes for Polysemy libraries.
 -- It reexports most core effects.
 module Incipit (
-  module Incipit.Prelude,
+  module IncipitBase,
   module Polysemy,
   module Polysemy.Async,
   module Polysemy.AtomicState,
@@ -19,6 +19,7 @@ module Incipit (
 ) where
 
 import qualified Control.Exception as Base
+import IncipitBase
 import Polysemy hiding (run)
 import Polysemy.Async
 import Polysemy.AtomicState
@@ -33,8 +34,6 @@ import Polysemy.Resource
 import Polysemy.State
 import Polysemy.Tagged
 import Polysemy.Writer
-
-import Incipit.Prelude
 
 -- |Run an 'IO' via 'Embed' and catch all exceptions, returning 'Either'.
 tryAny ::

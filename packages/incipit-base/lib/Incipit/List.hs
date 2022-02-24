@@ -2,7 +2,7 @@
 module Incipit.List where
 
 import qualified Data.List as List
-import Prelude (Maybe (..))
+import Data.Maybe (Maybe (..))
 
 -- |Return 'Just' the head of a list.
 head :: [a] -> Maybe a

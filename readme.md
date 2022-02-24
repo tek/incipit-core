@@ -33,8 +33,8 @@ mixins:
 
 # Custom Prelude
 
-In order to extend `incipit-core` with a local `Prelude`, the module `Incipit` has to be reexported and `incipit-core`'s
-`Prelude` needs to be hidden:
+In order to extend `incipit-core` (or `incipit-base`) with a local `Prelude`, the module `Incipit` has to be reexported
+and `incipit-core`'s `Prelude` needs to be hidden:
 
 ```yaml
 dependencies:

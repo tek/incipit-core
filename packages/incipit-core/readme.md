@@ -1,6 +1,9 @@
+# About
+
 This library provides a `Prelude` for [Polysemy] libraries, building upon [incipit-base] and exporting most of
 Polysemy's core modules.
 For a more comprehensive variant that includes some basic libraries, consider [incipit].
+
 # Usage
 
 `incipit-core` exports `Prelude`, so in order to use it you only have to hide `Prelude` from `base`:
@@ -12,13 +15,13 @@ dependencies:
     version: '>= 4 && < 5'
     mixin:
       - hiding (Prelude)
-  - incipit-core >= 0.1
+  - incipit-core >= 0.1.0.3
 ```
 
 For `cabal`:
 ```cabal
 build-depends:
-    base >=4 && <5, incipit-core >= 0.1
+    base >=4 && <5, incipit-core >= 0.1.0.3
 mixins:
     base hiding (Prelude)
 ```
@@ -35,7 +38,7 @@ dependencies:
     mixin:
       - hiding (Prelude)
   - name: incipit-core
-    version: >= 0.1
+    version: >= 0.1.0.3
     mixin:
       - hiding (Prelude)
 ```

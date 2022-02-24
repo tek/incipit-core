@@ -27,16 +27,17 @@ source-repository head
 
 library
   exposed-modules:
+      Incipit
       Incipit.Base
       Incipit.Debug
       Incipit.Either
       Incipit.Libraries
       Incipit.List
       Incipit.Misc
-      Incipit.Prelude
       Incipit.String
       Incipit.String.Conversion
       Incipit.String.Reexport
+      Prelude
   reexported-modules:
       Control.Concurrent.STM
     , Control.Concurrent.STM.TArray
