@@ -1,0 +1,47 @@
+name: incipit-base
+synopsis: A Prelude for Polysemy – Base Reexports
+description: See <https://hackage.haskell.org/package/incipit-base/docs/Incipit-Prelude.html>
+<<: !include shared/meta.yaml
+defaults:
+  local: shared/defaults.yaml
+
+library:
+  source-dirs: lib
+  dependencies:
+    - base >= 4.13 && < 4.17
+    - bytestring
+    - containers
+    - data-default >= 0.2
+    - stm
+    - text
+  reexported-modules:
+    - Control.Concurrent.STM
+    - Control.Concurrent.STM.TArray
+    - Control.Concurrent.STM.TBQueue
+    - Control.Concurrent.STM.TChan
+    - Control.Concurrent.STM.TMVar
+    - Control.Concurrent.STM.TQueue
+    - Control.Concurrent.STM.TSem
+    - Control.Concurrent.STM.TVar
+    - Control.Monad.STM
+    - Data.ByteString
+    - Data.ByteString.Builder
+    - Data.ByteString.Lazy
+    - Data.ByteString.Short
+    - Data.IntMap.Lazy
+    - Data.IntMap.Strict
+    - Data.IntSet
+    - Data.Map.Lazy
+    - Data.Map.Strict
+    - Data.Sequence
+    - Data.Set
+    - Data.Text
+    - Data.Text.IO
+    - Data.Text.Lazy
+    - Data.Text.Lazy.IO
+    - Data.Text.Read
+    - Data.Tree
+  when:
+    condition: false
+    generated-other-modules:
+      - Paths_incipit_base

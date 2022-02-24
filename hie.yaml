@@ -1,0 +1,7 @@
+cradle:
+  cabal:
+    - path: "./packages/incipit-base/lib"
+      component: "lib:incipit-base"
+
+    - path: "./packages/incipit-core/lib"
+      component: "lib:incipit-core"
