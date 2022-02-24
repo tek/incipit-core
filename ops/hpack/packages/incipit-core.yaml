@@ -12,7 +12,7 @@ library:
       version: '>= 4 && < 5'
       mixin:
         hiding (Prelude)
-    - incipit-base >= 0.1.0.2
+    - incipit-base == 0.1.0.2
     - polysemy >= 1.6
   reexported-modules:
     - Control.Concurrent.STM
