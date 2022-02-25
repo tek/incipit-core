@@ -21,19 +21,19 @@ module Incipit (
 import qualified Control.Exception as Base
 import IncipitBase
 import Polysemy hiding (run)
-import Polysemy.Async
-import Polysemy.AtomicState
-import Polysemy.Error
-import Polysemy.Fail
-import Polysemy.Input
+import Polysemy.Async hiding (Async, Await, Cancel)
+import Polysemy.AtomicState hiding (AtomicGet, AtomicState)
+import Polysemy.Error hiding (Catch, Throw)
+import Polysemy.Fail hiding (Fail)
+import Polysemy.Input hiding (Input)
 import Polysemy.Internal (send)
 import Polysemy.Internal.Kind (Append)
-import Polysemy.Output
-import Polysemy.Reader
-import Polysemy.Resource
-import Polysemy.State
-import Polysemy.Tagged
-import Polysemy.Writer
+import Polysemy.Output hiding (Output)
+import Polysemy.Reader hiding (Ask, Local)
+import Polysemy.Resource hiding (Bracket, BracketOnError)
+import Polysemy.State hiding (Get, Put)
+import Polysemy.Tagged hiding (Tagged)
+import Polysemy.Writer hiding (Listen, Pass, Tell)
 
 -- |Run an 'IO' via 'Embed' and catch all exceptions, returning 'Either'.
 tryAny ::
