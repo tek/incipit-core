@@ -7,6 +7,7 @@ module Incipit.Base (
   module Control.Exception,
   module Control.Monad,
   module Control.Monad.Fail,
+  module Control.Monad.IO.Class,
   module Data.Bifunctor,
   module Data.Bits,
   module Data.Bool,
@@ -85,6 +86,7 @@ import Control.Monad (
   (>=>),
   )
 import Control.Monad.Fail (MonadFail (..))
+import Control.Monad.IO.Class
 import Data.Bifunctor (Bifunctor (..))
 import Data.Bits (toIntegralSized, xor)
 import Data.Bool (Bool (..), bool, not, otherwise, (&&), (||))
