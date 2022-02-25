@@ -45,6 +45,7 @@ module Incipit.Base (
   module GHC.Show,
   module GHC.Stack,
   module GHC.TypeLits,
+  module Incipit.Fixed,
   module Incipit.Integral,
   module Numeric.Natural,
   module System.IO,
@@ -203,4 +204,5 @@ import GHC.TypeLits hiding (ErrorMessage (Text))
 import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
 
+import Incipit.Fixed
 import Incipit.Integral

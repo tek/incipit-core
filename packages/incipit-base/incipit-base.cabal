@@ -31,6 +31,7 @@ library
       Incipit.Base
       Incipit.Debug
       Incipit.Either
+      Incipit.Fixed
       Incipit.Integral
       Incipit.Libraries
       Incipit.List

@@ -17,6 +17,7 @@ safeOp op n = \case
     Just (op n d)
 {-# inline safeOp #-}
 
+-- | integer division truncated toward zero
 quot ::
   Integral a =>
   a ->
@@ -26,6 +27,9 @@ quot =
   safeOp Real.quot
 {-# inline quot #-}
 
+-- | integer remainder, satisfying
+--
+-- > (x `quot` y)*y + (x `rem` y) == x
 rem ::
   Integral a =>
   a ->
@@ -35,6 +39,7 @@ rem =
   safeOp Real.rem
 {-# inline rem #-}
 
+-- | integer division truncated toward negative infinity
 div ::
   Integral a =>
   a ->
@@ -44,6 +49,9 @@ div =
   safeOp Real.div
 {-# inline div #-}
 
+-- | integer modulus, satisfying
+--
+-- > (x `div` y)*y + (x `mod` y) == x
 mod ::
   Integral a =>
   a ->
@@ -53,6 +61,7 @@ mod =
   safeOp Real.mod
 {-# inline mod #-}
 
+-- | simultaneous 'quot' and 'rem'
 quotRem ::
   Integral a =>
   a ->
@@ -62,6 +71,7 @@ quotRem =
   safeOp Real.quotRem
 {-# inline quotRem #-}
 
+-- | simultaneous 'div' and 'mod'
 divMod ::
   Integral a =>
   a ->

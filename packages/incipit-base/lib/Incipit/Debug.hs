@@ -4,6 +4,7 @@
 module Incipit.Debug where
 
 import qualified Data.Text as Text
+import Data.Text (Text)
 import GHC.Stack (CallStack, SrcLoc (..), callStack, getCallStack)
 import System.IO.Unsafe (unsafePerformIO)
 
@@ -21,7 +22,6 @@ import Incipit.Base (
   )
 import Incipit.List (last)
 import Incipit.String.Conversion (ToString (toString), ToText (toText), show)
-import Data.Text (Text)
 
 srcLoc :: CallStack -> SrcLoc
 srcLoc = \case
