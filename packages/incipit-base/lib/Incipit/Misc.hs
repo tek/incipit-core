@@ -46,7 +46,7 @@ ifM condM onTrue onFalse =
 
 -- |Default to using the strict version since the lazy one is so controversial.
 foldl ::
-  ∀ b t a .
+  ∀ t b a .
   Foldable t =>
   (b -> a -> b) ->
   b ->
