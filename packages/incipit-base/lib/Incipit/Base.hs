@@ -45,6 +45,7 @@ module Incipit.Base (
   module GHC.Show,
   module GHC.Stack,
   module GHC.TypeLits,
+  module Incipit.Integral,
   module Numeric.Natural,
   module System.IO,
 ) where
@@ -180,7 +181,7 @@ import GHC.Num (Integer, Num (..), subtract)
 import GHC.OverloadedLabels (IsLabel (..))
 import GHC.Real (
   Fractional (..),
-  Integral (..),
+  Integral (toInteger),
   Ratio,
   Rational,
   Real (..),
@@ -201,3 +202,5 @@ import GHC.Stack (HasCallStack)
 import GHC.TypeLits hiding (ErrorMessage (Text))
 import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
+
+import Incipit.Integral
