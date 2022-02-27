@@ -73,3 +73,11 @@ type a ++ b =
   Append a b
 
 infixr 5 ++
+
+-- |Convenience alias for @pureT ()@.
+unitT ::
+  Functor f =>
+  Sem (WithTactics e f m r) (f ())
+unitT =
+  pureT ()
+{-# inline unitT #-}
