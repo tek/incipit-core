@@ -1,11 +1,16 @@
+-- |Safe overrides of the methods of class 'Integral'.
 module Incipit.Integral where
 
+import Data.Eq (Eq)
 import Data.Maybe (Maybe (Just, Nothing))
+import GHC.Num (Num)
 import qualified GHC.Real as Real
-import GHC.Real (Integral, Real)
+import GHC.Real (Integral)
 
+-- |Helper for operations that return 'Nothing' if the second operand is @0@.
 safeOp ::
-  Real a =>
+  Eq a =>
+  Num a =>
   (a -> a -> b) ->
   a ->
   a ->

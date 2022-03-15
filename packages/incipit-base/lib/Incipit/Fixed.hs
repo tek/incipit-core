@@ -1,3 +1,4 @@
+-- |Safe overrides of the 'Fixed' division functions.
 module Incipit.Fixed where
 
 import qualified Data.Fixed as Fixed

@@ -47,6 +47,7 @@ module Incipit.Base (
   module GHC.Stack,
   module GHC.TypeLits,
   module Incipit.Fixed,
+  module Incipit.Fractional,
   module Incipit.Integral,
   module Numeric.Natural,
   module System.IO,
@@ -183,7 +184,7 @@ import GHC.Generics (Generic)
 import GHC.Num (Integer, Num (..), subtract)
 import GHC.OverloadedLabels (IsLabel (..))
 import GHC.Real (
-  Fractional (..),
+  Fractional (fromRational),
   Integral (toInteger),
   Ratio,
   Rational,
@@ -207,4 +208,5 @@ import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
 
 import Incipit.Fixed
-import Incipit.Integral
+import Incipit.Fractional
+import Incipit.Integral hiding (safeOp)
