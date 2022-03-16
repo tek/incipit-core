@@ -37,12 +37,15 @@ The table below represents the @relude@ concept of conversion between the follow
 
 -}
 
-module Incipit.String
-    ( module Incipit.String.Reexport
-      -- $reexport
-    , module Incipit.String.Conversion
-      -- $conversion
-    ) where
+module Incipit.String (
+  module Incipit.String,
+  module Incipit.String.Reexport,
+  -- $reexport
+  module Incipit.String.Conversion
+  -- $conversion
+) where
+
+import Data.Function ((.))
 
 import Incipit.String.Conversion
 import Incipit.String.Reexport
@@ -55,3 +58,13 @@ Reexport data types and functions to work with 'Text', 'ByteString',
 Conversion functions between 'Text', 'String', 'ByteString'.
 Also some read|show helper functions.
 -}
+
+-- |Analog to 'fromString' for 'Text'.
+-- Converts a 'Text' to any @a@ that is an instance of 'IsString'.
+fromText ::
+  IsString a =>
+  Text ->
+  a
+fromText =
+  fromString . toString
+{-# inline fromText #-}

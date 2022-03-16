@@ -1,6 +1,7 @@
 # Unreleased
 
 * Add safe versions of `Fractional` division methods.
+* Add `fromText`.
 
 # 0.2.0.0
 
