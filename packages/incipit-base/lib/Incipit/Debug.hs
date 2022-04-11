@@ -89,23 +89,23 @@ tr msg a =
   unsafePerformIO (a <$ debugPrint (srcLoc callStack) msg)
 {-# noinline tr #-}
 
--- |Like 'Debug.Trace.traceShowId', but with 'Text' and with source location prefix.
+-- |Like 'Debug.Trace.traceShow', but with source location prefix.
 trs ::
-  Show a =>
-  HasCallStack =>
-  a ->
-  a
-trs a =
-  unsafePerformIO (a <$ debugPrint (srcLoc callStack) (show a))
-{-# noinline trs #-}
-
--- |Like 'Debug.Trace.traceShow', but with 'Text' and with source location prefix.
-trs' ::
   Show b =>
   HasCallStack =>
   b ->
   a ->
   a
-trs' b a =
+trs b a =
   unsafePerformIO (a <$ debugPrint (srcLoc callStack) (show b))
-{-# noinline trs' #-}
+{-# noinline trs #-}
+
+-- |Like 'Debug.Trace.traceShowId', but with source location prefix.
+trsi ::
+  Show a =>
+  HasCallStack =>
+  a ->
+  a
+trsi a =
+  unsafePerformIO (a <$ debugPrint (srcLoc callStack) (show a))
+{-# noinline trsi #-}
