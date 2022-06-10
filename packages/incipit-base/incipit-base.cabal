@@ -7,27 +7,23 @@ cabal-version: 2.2
 name:           incipit-base
 version:        0.2.0.0
 synopsis:       A Prelude for Polysemy – Base Reexports
-description:    See <https://hackage.haskell.org/package/incipit-base/docs/Incipit-Prelude.html>
+description:    See https://hackage.haskell.org/package/incipit-base/docs/IncipitBase.html
 category:       Prelude
-homepage:       https://github.com/tek/incipit#readme
-bug-reports:    https://github.com/tek/incipit/issues
+homepage:       https://github.com/tek/incipit-core#readme
+bug-reports:    https://github.com/tek/incipit-core/issues
 author:         Torsten Schmits
-maintainer:     haskell@tryp.io
+maintainer:     hackage@tryp.io
 copyright:      2022 Torsten Schmits
 license:        BSD-2-Clause-Patent
 license-file:   LICENSE
 build-type:     Simple
-extra-source-files:
-    readme.md
-    changelog.md
 
 source-repository head
   type: git
-  location: https://github.com/tek/incipit
+  location: https://github.com/tek/incipit-core
 
 library
   exposed-modules:
-      Incipit
       Incipit.Base
       Incipit.Debug
       Incipit.Either
@@ -40,7 +36,7 @@ library
       Incipit.String
       Incipit.String.Conversion
       Incipit.String.Reexport
-      Prelude
+      IncipitBase
   reexported-modules:
       Control.Concurrent.STM
     , Control.Concurrent.STM.TArray
@@ -85,6 +81,7 @@ library
       DeriveFoldable
       DeriveFunctor
       DeriveGeneric
+      DeriveLift
       DeriveTraversable
       DerivingStrategies
       DerivingVia
@@ -105,7 +102,6 @@ library
       MultiParamTypeClasses
       MultiWayIf
       NamedFieldPuns
-      NoImplicitPrelude
       OverloadedStrings
       OverloadedLists
       PackageImports
@@ -118,6 +114,7 @@ library
       RankNTypes
       RecordWildCards
       RecursiveDo
+      RoleAnnotations
       ScopedTypeVariables
       StandaloneDeriving
       TemplateHaskell
@@ -130,7 +127,8 @@ library
       UndecidableInstances
       UnicodeSyntax
       ViewPatterns
-  ghc-options: -Wall -Wredundant-constraints -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Widentities
+      NoImplicitPrelude
+  ghc-options: -Wall -Wredundant-constraints -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Widentities -Wunused-packages
   build-depends:
       base >=4.13 && <4.17
     , bytestring
@@ -138,6 +136,4 @@ library
     , data-default >=0.2
     , stm
     , text
-  if impl(ghc >= 8.10)
-    ghc-options: -Wunused-packages
   default-language: Haskell2010

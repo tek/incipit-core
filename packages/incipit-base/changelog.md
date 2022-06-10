@@ -2,6 +2,8 @@
 
 * Add safe versions of `Fractional` division methods.
 * Add `fromText`.
+* Remove module exports for `Prelude` to avoid a Stack bug.
+* Rename `Incipit` modules to `IncipitBase` and `IncipitCore`.
 
 # 0.2.0.0
 

@@ -5,7 +5,8 @@ It contains the reexports from `base` that are inherited by the other two packag
 
 # Usage
 
-`incipit-base` exports `Prelude`, so in order to use it you only have to hide `Prelude` from `base`:
+Using a custom `Prelude` requires the use of Cabal mixins to hide the module from `base` and replace it with
+`IncipitBase`:
 
 For `hpack`:
 ```yaml
@@ -14,16 +15,23 @@ dependencies:
     version: '>= 4 && < 5'
     mixin:
       - hiding (Prelude)
-  - incipit-base >= 0.1.0.3
+  - name: incipit-base
+    version: '>= 0.3'
+    mixin:
+      - (IncipitBase as Prelude)
+      - hiding (IncipitBase)
 ```
 
 For `cabal`:
 ```cabal
 build-depends:
-    base >=4 && <5, incipit-base >= 0.1.0.3
+    base >=4 && <5, incipit-base >= 0.3
 mixins:
-    base hiding (Prelude)
+    base hiding (Prelude), incipit-base (IncipitBase as Prelude), incipit-base hiding (IncipitBase)
 ```
+
+`incipit-base` used to export `Prelude`, but
+[stack can't deal with that](https://github.com/commercialhaskell/stack/issues/5414).
 
 [incipit]: https://hackage.haskell.org/package/incipit
 [Polysemy]: https://hackage.haskell.org/package/polysemy

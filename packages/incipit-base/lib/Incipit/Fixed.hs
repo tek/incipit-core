@@ -1,4 +1,4 @@
--- |Safe overrides of the 'Fixed' division functions.
+-- |Safe overrides of the "Data.Fixed" division functions.
 module Incipit.Fixed where
 
 import qualified Data.Fixed as Fixed
@@ -7,7 +7,7 @@ import GHC.Real (Integral, Real)
 
 import Incipit.Integral (safeOp)
 
--- | Generalisation of 'div' to any instance of 'Real'
+-- | Generalisation of 'GHC.Real.div' to any instance of 'Real'
 div' ::
   Real a =>
   Integral b =>
@@ -17,7 +17,7 @@ div' ::
 div' =
   safeOp Fixed.div'
 
--- | Generalisation of 'divMod' to any instance of 'Real'
+-- | Generalisation of 'GHC.Real.divMod' to any instance of 'Real'
 divMod' ::
   Real a =>
   Integral b =>
@@ -27,7 +27,7 @@ divMod' ::
 divMod' =
   safeOp Fixed.divMod'
 
--- | Generalisation of 'mod' to any instance of 'Real'
+-- | Generalisation of 'GHC.Real.mod' to any instance of 'Real'
 mod' ::
   Real a =>
   a ->

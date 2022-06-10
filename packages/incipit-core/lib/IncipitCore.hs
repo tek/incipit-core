@@ -1,6 +1,6 @@
 -- |This is the central module on which to build upon when constructing Preludes for Polysemy libraries.
 -- It reexports most core effects.
-module Incipit (
+module IncipitCore (
   module IncipitBase,
   module Polysemy,
   module Polysemy.Async,
@@ -14,7 +14,7 @@ module Incipit (
   module Polysemy.State,
   module Polysemy.Tagged,
   module Polysemy.Writer,
-  module Incipit,
+  module IncipitCore,
   send,
 ) where
 

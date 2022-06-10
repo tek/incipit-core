@@ -59,6 +59,7 @@ dbg =
 
 -- |Print a value with a 'Show' instance in an arbitrary 'Monad'.
 dbgs ::
+  ∀ a m .
   HasCallStack =>
   Monad m =>
   Show a =>
@@ -70,6 +71,7 @@ dbgs a =
 
 -- |Print a value with a 'Show' instance in an arbitrary 'Monad', returning the value.
 dbgs_ ::
+  ∀ a m .
   HasCallStack =>
   Monad m =>
   Show a =>
@@ -91,6 +93,7 @@ tr msg a =
 
 -- |Like 'Debug.Trace.traceShow', but with source location prefix.
 trs ::
+  ∀ b a .
   Show b =>
   HasCallStack =>
   b ->

@@ -11,7 +11,8 @@ The purpose of each package is:
 
 # Usage
 
-Both `incipit` and `incipit-core` export `Prelude`, so in order to use them you only have to hide `Prelude` from `base`:
+Using a custom `Prelude` requires the use of Cabal mixins to hide the module from `base` and replace it with
+`IncipitCore` or `IncipitBase`:
 
 For `hpack`:
 ```yaml
@@ -20,21 +21,28 @@ dependencies:
     version: '>= 4 && < 5'
     mixin:
       - hiding (Prelude)
-  - incipit-core >= 0.1
+  - name: incipit-core
+    version: '>= 0.3'
+    mixin:
+      - (IncipitCore as Prelude)
+      - hiding (IncipitCore)
 ```
 
 For `cabal`:
 ```cabal
 build-depends:
-    base >=4 && <5, incipit-core >= 0.1
+    base >=4 && <5, incipit-core >= 0.3
 mixins:
-    base hiding (Prelude)
+    base hiding (Prelude), incipit-core (IncipitCore as Prelude), incipit-core hiding (IncipitCore)
 ```
+
+These packages used to export `Prelude`, but
+[stack can't deal with that](https://github.com/commercialhaskell/stack/issues/5414).
 
 # Custom Prelude
 
-In order to extend `incipit-core` (or `incipit-base`) with a local `Prelude`, the module `Incipit` has to be reexported
-and `incipit-core`'s `Prelude` needs to be hidden:
+In order to extend `incipit-core` (or `incipit-base`) with a local `Prelude`, the modules `IncipitCore` or `IncipitBase`
+have to be reexported:
 
 ```yaml
 dependencies:
@@ -42,19 +50,16 @@ dependencies:
     version: '>= 4 && < 5'
     mixin:
       - hiding (Prelude)
-  - name: incipit-core
-    version: >= 0.1
-    mixin:
-      - hiding (Prelude)
+  - incipit-core >= 0.3
 ```
 
 ```haskell
 module Prelude (
   module Prelude,
-  module Incipit,
+  module IncipitCore,
 ) where
 
-import Incipit
+import IncipitCore
 
 projectName :: Text
 projectName =
