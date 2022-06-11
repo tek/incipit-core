@@ -4,6 +4,7 @@
 * Add `fromText`.
 * Remove module exports for `Prelude` to avoid a Stack bug.
 * Rename `Incipit` modules to `IncipitBase` and `IncipitCore`.
+* Export `withFrozenCallStack`.
 
 # 0.2.0.0
 

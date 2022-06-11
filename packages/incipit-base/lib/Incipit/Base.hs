@@ -202,7 +202,7 @@ import GHC.Real (
   (^^),
   )
 import GHC.Show (Show)
-import GHC.Stack (HasCallStack)
+import GHC.Stack (HasCallStack, withFrozenCallStack)
 import GHC.TypeLits hiding (ErrorMessage (Text))
 import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
