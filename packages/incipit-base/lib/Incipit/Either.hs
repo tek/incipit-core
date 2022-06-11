@@ -28,3 +28,14 @@ unify :: Either a a -> a
 unify =
   either id id
 {-# inline unify #-}
+
+-- |Run an applicative action on the 'Left' side of an 'Either' to unify the types.
+leftA ::
+  Applicative m =>
+  (a -> m b) ->
+  Either a b ->
+  m b
+leftA f = \case
+  Right b -> pure b
+  Left a -> f a
+{-# inline leftA #-}

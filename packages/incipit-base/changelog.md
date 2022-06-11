@@ -5,6 +5,7 @@
 * Remove module exports for `Prelude` to avoid a Stack bug.
 * Rename `Incipit` modules to `IncipitBase` and `IncipitCore`.
 * Export `withFrozenCallStack`.
+* Add `leftA`, an `Either` combinator that runs an applicative action on a `Left`.
 
 # 0.2.0.0
 
