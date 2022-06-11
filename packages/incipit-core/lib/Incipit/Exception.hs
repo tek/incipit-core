@@ -17,6 +17,18 @@ import Incipit.String.Conversion (show)
 import Incipit.String.Reexport (Text)
 
 -- |Run an 'IO' via 'Embed' and catch exceptions of type @e@, returning 'Either'.
+-- Unlike all other combinators, this doesn't convert the exception to 'Text'.
+tryIOE ::
+  ∀ e r a .
+  Exception e =>
+  Member (Embed IO) r =>
+  IO a ->
+  Sem r (Either e a)
+tryIOE =
+  embed @IO . Base.try @e
+{-# inline tryIOE #-}
+
+-- |Run an 'IO' via 'Embed' and catch exceptions of type @e@, returning 'Either'.
 tryIO ::
   ∀ e r a .
   Exception e =>
