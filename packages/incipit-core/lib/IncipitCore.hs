@@ -1,6 +1,7 @@
 -- |This is the central module on which to build upon when constructing Preludes for Polysemy libraries.
 -- It reexports most core effects.
 module IncipitCore (
+  module Incipit.Exception,
   module IncipitBase,
   module Polysemy,
   module Polysemy.Async,
@@ -18,7 +19,7 @@ module IncipitCore (
   send,
 ) where
 
-import qualified Control.Exception as Base
+import Incipit.Exception
 import IncipitBase
 import Polysemy hiding (run)
 import Polysemy.Async (Async)
@@ -40,33 +41,6 @@ import Polysemy.State hiding (Get, Put)
 import Polysemy.Tagged (Tagged)
 import Polysemy.Tagged hiding (Tagged)
 import Polysemy.Writer hiding (Listen, Pass, Tell)
-
--- |Run an 'IO' via 'Embed' and catch all exceptions, returning 'Either'.
-tryAny ::
-  Member (Embed IO) r =>
-  IO a ->
-  Sem r (Either Text a)
-tryAny =
-  embed @IO . fmap (first show) . Base.try @SomeException
-{-# inline tryAny #-}
-
--- |Run an 'IO' via 'Embed' and catch all exceptions, returning 'Maybe'.
-tryMaybe ::
-  Member (Embed IO) r =>
-  IO a ->
-  Sem r (Maybe a)
-tryMaybe =
-  embed @IO . fmap rightToMaybe . Base.try @SomeException
-{-# inline tryMaybe #-}
-
--- |Run an 'IO' via 'Embed' and catch and ignore all exceptions.
-ignoreException ::
-  Member (Embed IO) r =>
-  IO () ->
-  Sem r ()
-ignoreException =
-  void . embed @IO . Base.try @SomeException
-{-# inline ignoreException #-}
 
 -- |Convenience type alias for concatenating two effect rows.
 type a ++ b =

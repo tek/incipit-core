@@ -24,6 +24,7 @@ source-repository head
 
 library
   exposed-modules:
+      Incipit.Exception
       IncipitCore
   reexported-modules:
       Control.Concurrent.STM

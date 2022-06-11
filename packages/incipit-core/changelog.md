@@ -2,6 +2,7 @@
 
 * Remove module exports for `Prelude` to avoid a Stack bug.
 * Rename `Incipit` modules to `IncipitBase` and `IncipitCore`.
+* Add more `try*` combinators and use consistent naming.
 
 # 0.2.0.0
 
