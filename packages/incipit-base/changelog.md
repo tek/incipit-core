@@ -1,5 +1,7 @@
 # Unreleased
 
+# 0.3.0.0
+
 * Add safe versions of `Fractional` division methods.
 * Add `fromText`.
 * Remove module exports for `Prelude` to avoid a Stack bug.

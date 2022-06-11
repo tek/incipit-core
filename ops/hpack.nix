@@ -105,7 +105,7 @@ in {
     library = {
       dependencies = [
         "base >= 4.13 && < 4.17"
-        "incipit-base == 0.2.0.0"
+        "incipit-base == 0.3.0.0"
         "polysemy >= 1.6"
       ];
       inherit reexported-modules;
