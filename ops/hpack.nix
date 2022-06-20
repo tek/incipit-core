@@ -51,6 +51,7 @@ let
     description = "See https://hackage.haskell.org/package/${name}/docs/${doc}.html";
     library.source-dirs = "lib";
     default-extensions = config.ghci.extensions;
+    extra-source-files = ["changelog.md" "readme.md"];
   };
 
   reexported-modules = [
