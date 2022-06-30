@@ -1,5 +1,7 @@
 # Unreleased
 
+* Add safe versions of `Foldable.minimum` et al.
+
 # 0.3.0.0
 
 * Add safe versions of `Fractional` division methods.

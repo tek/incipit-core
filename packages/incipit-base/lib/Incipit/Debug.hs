@@ -32,7 +32,7 @@ debugPrint ::
   SrcLoc ->
   Text ->
   IO ()
-debugPrint SrcLoc {srcLocModule = (toText -> slm), srcLocStartLine} msg =
+debugPrint SrcLoc {srcLocModule = (toText -> slm), srcLocStartLine} !msg =
   putStrLn (toString moduleName <> ":" <> show srcLocStartLine <> " " <> toString msg)
   where
     moduleName =
