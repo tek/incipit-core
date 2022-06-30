@@ -15,7 +15,6 @@ module Incipit.Base (
   module Data.Coerce,
   module Data.Either,
   module Data.Eq,
-  module Data.Foldable,
   module Data.Function,
   module Data.Functor,
   module Data.Functor.Compose,
@@ -47,6 +46,7 @@ module Incipit.Base (
   module GHC.Stack,
   module GHC.TypeLits,
   module Incipit.Fixed,
+  module Incipit.Foldable,
   module Incipit.Fractional,
   module Incipit.Integral,
   module Numeric.Natural,
@@ -95,24 +95,6 @@ import Data.Char (Char, chr)
 import Data.Coerce (Coercible, coerce)
 import Data.Either
 import Data.Eq (Eq (..))
-import Data.Foldable (
-  Foldable (elem, fold, foldMap, foldMap', foldl', foldl1, foldr, foldr', foldr1, length, maximum, minimum, null, product, sum, toList),
-  all,
-  and,
-  any,
-  asum,
-  concat,
-  concatMap,
-  find,
-  foldlM,
-  forM_,
-  for_,
-  mapM_,
-  or,
-  sequenceA_,
-  sequence_,
-  traverse_,
-  )
 import Data.Function (const, fix, flip, id, on, ($), (&), (.))
 import Data.Functor (Functor (..), void, ($>), (<$>), (<&>))
 import Data.Functor.Compose (Compose (..))
@@ -209,4 +191,5 @@ import System.IO (FilePath, IO, print, putStr, putStrLn)
 
 import Incipit.Fixed
 import Incipit.Fractional
+import Incipit.Foldable
 import Incipit.Integral hiding (safeOp)
