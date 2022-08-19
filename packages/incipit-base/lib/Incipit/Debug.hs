@@ -44,6 +44,7 @@ debugPrintWithLoc ::
   Text ->
   m ()
 debugPrintWithLoc loc msg = do
+  () <- pure ()
   () <- pure (unsafePerformIO (debugPrint loc msg))
   pure ()
 
