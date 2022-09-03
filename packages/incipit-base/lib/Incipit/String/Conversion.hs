@@ -106,7 +106,7 @@ instance ConvertUtf8 String ByteString where
     {-# INLINE encodeUtf8 #-}
 
     decodeUtf8 :: ByteString -> String
-    decodeUtf8 = T.unpack . T.decodeUtf8
+    decodeUtf8 = T.unpack . decodeUtf8
     {-# INLINE decodeUtf8 #-}
 
     decodeUtf8Strict :: ByteString -> Either T.UnicodeException String
@@ -148,7 +148,7 @@ instance ConvertUtf8 String LByteString where
     {-# INLINE encodeUtf8 #-}
 
     decodeUtf8 :: LByteString -> String
-    decodeUtf8 = LT.unpack . LT.decodeUtf8
+    decodeUtf8 = LT.unpack . decodeUtf8
     {-# INLINE decodeUtf8 #-}
 
     decodeUtf8Strict :: LByteString -> Either T.UnicodeException String
