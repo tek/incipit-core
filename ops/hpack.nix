@@ -84,13 +84,15 @@ let
     "Data.Tree"
   ];
 
+  base = "base >= 4.13 && < 4.17";
+
 in {
 
   incipit-base = merge (project "incipit-base" "IncipitBase") {
     synopsis = "A Prelude for Polysemy – Base Reexports";
     library = {
       dependencies = [
-        "base >= 4.13 && < 4.17"
+        base
         "bytestring"
         "containers"
         "data-default >= 0.2"
@@ -105,7 +107,7 @@ in {
     synopsis = "A Prelude for Polysemy";
     library = {
       dependencies = [
-        "base >= 4.13 && < 4.17"
+        base
         "incipit-base == 0.3.0.0"
         "polysemy >= 1.6"
       ];
