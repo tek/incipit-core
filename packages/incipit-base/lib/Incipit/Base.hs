@@ -51,6 +51,7 @@ module Incipit.Base (
   module Incipit.Integral,
   module Numeric.Natural,
   module System.IO,
+  module Text.Show,
 ) where
 
 import Control.Applicative (
@@ -188,8 +189,9 @@ import GHC.Stack (HasCallStack, withFrozenCallStack)
 import GHC.TypeLits hiding (ErrorMessage (Text))
 import Numeric.Natural (Natural)
 import System.IO (FilePath, IO, print, putStr, putStrLn)
+import Text.Show (showParen, showString, showsPrec)
 
 import Incipit.Fixed
-import Incipit.Fractional
 import Incipit.Foldable
+import Incipit.Fractional
 import Incipit.Integral hiding (safeOp)
