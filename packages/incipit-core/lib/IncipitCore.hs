@@ -1,3 +1,4 @@
+{-# language CPP #-}
 -- |This is the central module on which to build upon when constructing Preludes for Polysemy libraries.
 -- It reexports most core effects.
 module IncipitCore (
@@ -16,7 +17,9 @@ module IncipitCore (
   module Polysemy.Tagged,
   module Polysemy.Writer,
   module IncipitCore,
+#if !MIN_VERSION_polysemy(1,8,0)
   send,
+#endif
 ) where
 
 import Incipit.Exception
@@ -31,7 +34,9 @@ import Polysemy.Fail (Fail)
 import Polysemy.Fail hiding (Fail)
 import Polysemy.Input (Input)
 import Polysemy.Input hiding (Input)
+#if !MIN_VERSION_polysemy(1,8,0)
 import Polysemy.Internal (send)
+#endif
 import Polysemy.Internal.Kind (Append)
 import Polysemy.Output (Output)
 import Polysemy.Output hiding (Output)

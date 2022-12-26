@@ -73,6 +73,8 @@ let
     "Data.IntSet"
     "Data.Map.Lazy"
     "Data.Map.Strict"
+    "Data.Map.Merge.Lazy"
+    "Data.Map.Merge.Strict"
     "Data.Sequence"
     "Data.Set"
     "Data.Text"
@@ -84,7 +86,7 @@ let
     "Data.Tree"
   ];
 
-  base = "base >= 4.13 && < 4.17";
+  base = "base >= 4.13 && < 4.18";
 
 in {
 
