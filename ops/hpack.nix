@@ -110,7 +110,7 @@ in {
     library = {
       dependencies = [
         base
-        "incipit-base == 0.3.0.0"
+        ("incipit-base == " + import ./version.nix)
         "polysemy >= 1.6"
       ];
       inherit reexported-modules;

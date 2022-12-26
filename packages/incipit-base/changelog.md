@@ -1,6 +1,9 @@
 # Unreleased
 
+# 0.4.0.0
+
 * Add safe versions of `Foldable.minimum` et al.
+* Export `showsPrec`, `showParen`, `showString`.
 
 # 0.3.0.0
 
