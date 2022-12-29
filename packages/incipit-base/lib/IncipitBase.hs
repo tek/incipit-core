@@ -14,6 +14,7 @@ module IncipitBase (
   module Incipit.List,
   module Incipit.Misc,
   module Incipit.String,
+  module Incipit.TypeError,
 ) where
 
 import Incipit.Base
@@ -23,3 +24,4 @@ import Incipit.Libraries
 import Incipit.List
 import Incipit.Misc
 import Incipit.String
+import Incipit.TypeError

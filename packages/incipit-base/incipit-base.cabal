@@ -40,6 +40,7 @@ library
       Incipit.String
       Incipit.String.Conversion
       Incipit.String.Reexport
+      Incipit.TypeError
       IncipitBase
   reexported-modules:
       Control.Concurrent.STM
