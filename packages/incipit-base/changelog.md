@@ -1,5 +1,9 @@
 # Unreleased
 
+# 0.5.0.0
+
+Add type error concatenation families from `type-errors-pretty`.
+
 # 0.4.0.0
 
 * Add safe versions of `Foldable.minimum` et al.
