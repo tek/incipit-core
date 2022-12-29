@@ -1,5 +1,9 @@
 # Unreleased
 
+# 0.4.1.0
+
+* Reexport `Polysemy.Scoped`
+
 # 0.3.0.0
 
 * Remove module exports for `Prelude` to avoid a Stack bug.
