@@ -13,6 +13,9 @@ module IncipitCore (
   module Polysemy.Output,
   module Polysemy.Reader,
   module Polysemy.Resource,
+#if MIN_VERSION_polysemy(1,8,0)
+  module Polysemy.Scoped,
+#endif
   module Polysemy.State,
   module Polysemy.Tagged,
   module Polysemy.Writer,
@@ -42,6 +45,9 @@ import Polysemy.Output (Output)
 import Polysemy.Output hiding (Output)
 import Polysemy.Reader hiding (Ask, Local)
 import Polysemy.Resource hiding (Bracket, BracketOnError)
+#if MIN_VERSION_polysemy(1,8,0)
+import Polysemy.Scoped
+#endif
 import Polysemy.State hiding (Get, Put)
 import Polysemy.Tagged (Tagged)
 import Polysemy.Tagged hiding (Tagged)
