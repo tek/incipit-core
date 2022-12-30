@@ -2,7 +2,7 @@
 
 # 0.5.0.0
 
-Add type error concatenation families from `type-errors-pretty`.
+* Add type error concatenation families from `type-errors-pretty`.
 
 # 0.4.0.0
 
