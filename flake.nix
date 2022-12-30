@@ -2,18 +2,19 @@
   description = "A Prelude for Polysemy";
 
   inputs.hix.url = git+https://git.tryp.io/tek/hix;
+  inputs.polysemy.url = path:/home/tek/code/tek/haskell/polysemy;
 
-  outputs = { hix, ... }:
+  outputs = { hix, polysemy, ... }:
   let
 
-    dev = { hackage, ... }: {
-      polysemy = hackage "1.8.0.0" "0jgaqmcf4l8h58g1y576rrr74sii60mymqxh3ii3clnxcllp3p01";
-      polysemy-plugin = hackage "0.4.3.1" "0kjwxal9m3lvri35vliwfwcgcj9fkp50ybv4kbgvsjj8srh0pyfj";
+    all = { source, ... }: {
+      polysemy = source.root polysemy;
+      polysemy-plugin = source.sub polysemy "polysemy-plugin";
     };
 
   in hix.lib.pro ({ config, lib, ... }: {
     devGhc.compiler = "ghc925";
-    overrides = { inherit dev; };
+    overrides = { inherit all; };
     packages = {
       incipit-base = ./packages/incipit-base;
       incipit-core = ./packages/incipit-core;

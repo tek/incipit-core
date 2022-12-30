@@ -12,7 +12,11 @@ module IncipitCore (
   module Polysemy.Input,
   module Polysemy.Output,
   module Polysemy.Reader,
+#if MIN_VERSION_polysemy(2,0,0)
+  module Polysemy.Bracket,
+#else
   module Polysemy.Resource,
+#endif
 #if MIN_VERSION_polysemy(1,8,0)
   module Polysemy.Scoped,
 #endif
@@ -44,7 +48,11 @@ import Polysemy.Internal.Kind (Append)
 import Polysemy.Output (Output)
 import Polysemy.Output hiding (Output)
 import Polysemy.Reader hiding (Ask, Local)
+#if MIN_VERSION_polysemy(2,0,0)
+import Polysemy.Bracket hiding (GeneralBracket)
+#else
 import Polysemy.Resource hiding (Bracket, BracketOnError)
+#endif
 #if MIN_VERSION_polysemy(1,8,0)
 import Polysemy.Scoped
 #endif
@@ -59,6 +67,7 @@ type a ++ b =
 
 infixr 5 ++
 
+#if !MIN_VERSION_polysemy(2,0,0)
 -- |Convenience alias for @pureT ()@.
 unitT ::
   Functor f =>
@@ -66,3 +75,4 @@ unitT ::
 unitT =
   pureT ()
 {-# inline unitT #-}
+#endif
