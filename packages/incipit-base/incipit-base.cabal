@@ -5,7 +5,7 @@ cabal-version: 2.2
 -- see: https://github.com/sol/hpack
 
 name:           incipit-base
-version:        0.5.0.0
+version:        0.5.1.0
 synopsis:       A Prelude for Polysemy – Base Reexports
 description:    See https://hackage.haskell.org/package/incipit-base/docs/IncipitBase.html
 category:       Prelude
