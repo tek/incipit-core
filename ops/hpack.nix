@@ -45,7 +45,7 @@ in {
       dependencies = [
         "bytestring"
         "containers"
-        "data-default >= 0.2"
+        "data-default ^>= 0.7"
         "stm"
         "text"
       ];
@@ -64,7 +64,7 @@ in {
       enable = true;
       dependencies = [
         ("incipit-base == " + import ./version.nix)
-        "polysemy >= 1.6"
+        "polysemy >= 1.6 && < 2"
       ];
       cabal = { inherit reexported-modules; };
     };
