@@ -7,7 +7,7 @@ cabal-version: 2.2
 name:           incipit-core
 version:        0.5.0.0
 synopsis:       A Prelude for Polysemy
-description:    See https://hackage.haskell.org/package/incipit-core/docs/Incipit.Core.html
+description:    See https://hackage.haskell.org/package/incipit-core/docs/IncipitCore.html
 category:       Prelude
 homepage:       https://github.com/tek/incipit-core#readme
 bug-reports:    https://github.com/tek/incipit-core/issues

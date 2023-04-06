@@ -23,6 +23,7 @@
       author = "Torsten Schmits";
       default-extensions = ["NoImplicitPrelude"];
       paths = false;
+      base = "base >= 4.13 && < 4.18";
       meta = {
         maintainer = "hackage@tryp.io";
         category = "Prelude";

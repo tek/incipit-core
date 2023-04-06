@@ -37,10 +37,7 @@ in {
   incipit-base = {
     src = ../packages/incipit-base;
 
-    cabal.base = "base >= 4.13 && < 4.18";
-    cabal.meta = {
-      synopsis = "A Prelude for Polysemy – Base Reexports";
-    };
+    cabal.meta.synopsis = "A Prelude for Polysemy – Base Reexports";
     rootModule = "IncipitBase";
 
     library = {
@@ -60,10 +57,8 @@ in {
   incipit-core = {
     src = ../packages/incipit-core;
 
-    cabal.base = "base >= 4.13 && < 4.18";
-    cabal.meta = {
-      synopsis = "A Prelude for Polysemy";
-    };
+    cabal.meta.synopsis = "A Prelude for Polysemy";
+    rootModule = "IncipitCore";
 
     library = {
       enable = true;
