@@ -6,8 +6,7 @@
   outputs = { hix, ... }:
   let
 
-  in hix.lib.pro ({ config, lib, ... }: {
-    packages = import ./ops/hpack.nix;
+  in hix.lib.pro ({config, ...}: {
     compiler = "ghc92";
     ghcVersions = ["ghc810" "ghc90" "ghc92" "ghc94"];
     main = "incipit-core";
@@ -31,6 +30,73 @@
         github = "tek/incipit-core";
         extra-source-files = ["changelog.md" "readme.md"];
       };
+      component.reexported-modules = [
+        "Control.Concurrent.STM"
+        "Control.Concurrent.STM.TArray"
+        "Control.Concurrent.STM.TBQueue"
+        "Control.Concurrent.STM.TChan"
+        "Control.Concurrent.STM.TMVar"
+        "Control.Concurrent.STM.TQueue"
+        "Control.Concurrent.STM.TSem"
+        "Control.Concurrent.STM.TVar"
+        "Control.Monad.STM"
+        "Data.ByteString"
+        "Data.ByteString.Builder"
+        "Data.ByteString.Lazy"
+        "Data.ByteString.Short"
+        "Data.IntMap.Lazy"
+        "Data.IntMap.Strict"
+        "Data.IntSet"
+        "Data.Map.Lazy"
+        "Data.Map.Strict"
+        "Data.Map.Merge.Lazy"
+        "Data.Map.Merge.Strict"
+        "Data.Sequence"
+        "Data.Set"
+        "Data.Text"
+        "Data.Text.IO"
+        "Data.Text.Lazy"
+        "Data.Text.Lazy.Builder"
+        "Data.Text.Lazy.IO"
+        "Data.Text.Read"
+        "Data.Tree"
+      ];
     };
+
+    packages.incipit-base = {
+      src = ./packages/incipit-base;
+
+      cabal.meta.synopsis = "A Prelude for Polysemy – Base Reexports";
+      rootModule = "IncipitBase";
+
+      library = {
+        enable = true;
+        dependencies = [
+          "bytestring"
+          "containers"
+          "data-default ^>= 0.7"
+          "stm"
+          "text"
+        ];
+      };
+
+    };
+
+    packages.incipit-core = {
+      src = ./packages/incipit-core;
+
+      cabal.meta.synopsis = "A Prelude for Polysemy";
+      rootModule = "IncipitCore";
+
+      library = {
+        enable = true;
+        dependencies = [
+          config.packages.incipit-base.dep.exact
+          "polysemy >= 1.6 && < 2"
+        ];
+      };
+
+    };
+
   });
 }
