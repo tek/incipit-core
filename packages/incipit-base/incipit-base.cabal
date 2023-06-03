@@ -1,6 +1,6 @@
 cabal-version: 2.2
 
--- This file has been generated from package.yaml by hpack version 0.35.0.
+-- This file has been generated from package.yaml by hpack version 0.35.2.
 --
 -- see: https://github.com/sol/hpack
 
@@ -75,6 +75,7 @@ library
   hs-source-dirs:
       lib
   default-extensions:
+      NoImplicitPrelude
       AllowAmbiguousTypes
       ApplicativeDo
       BlockArguments
@@ -136,7 +137,6 @@ library
       TypeApplications
       TypeOperators
       TypeSynonymInstances
-      NoImplicitPrelude
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
       base >=4.13 && <4.19
