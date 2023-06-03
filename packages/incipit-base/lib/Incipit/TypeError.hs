@@ -3,7 +3,7 @@
 -- | Description: 'ErrorMessage' concatenation operators, stolen from type-errors-pretty.
 module Incipit.TypeError where
 
-import GHC.TypeLits (ErrorMessage (..), Symbol)
+import GHC.TypeLits (ErrorMessage (..), Symbol, TypeError)
 
 -- | Concat two error message strings.
 type (<>) :: k1 -> k2 -> ErrorMessage

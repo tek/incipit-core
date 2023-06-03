@@ -1,5 +1,7 @@
 # Unreleased
 
+* Add polymorphic type family `Undefined` that emits a `TypeError`.
+
 # 0.5.0.0
 
 * Add type error concatenation families from `type-errors-pretty`.
