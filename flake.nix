@@ -7,14 +7,13 @@
   let
 
   in hix.lib.pro ({config, ...}: {
-    compiler = "ghc92";
     ghcVersions = ["ghc810" "ghc90" "ghc92" "ghc94"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
 
     envs.dev.overrides = { hackage, ... }: {
-      polysemy = hackage "1.9.0.0" "1af07cppnjpv5v56wanya1mhkvbfnyynf5447mnkcf4zc4k23pyk";
-      polysemy-plugin = hackage "0.4.4.0" "08ry72bw78fis9iallzw6wsrzxnlmayq2k2yy0j79hpw4sp8knmg";
+      polysemy = hackage "1.9.1.0" "05mhzjz6hz0dnxsn3cc0l6yyj5ch35gn8xfnx0a1gn3q8yljfg2a";
+      polysemy-plugin = hackage "0.4.5.0" "0v2k0l42zaangwv050xfv5jdqfrbvdxfr533291ndsxalv8n3xi8";
     };
 
     cabal = {
