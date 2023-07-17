@@ -3,13 +3,11 @@
 
   inputs.hix.url = "git+https://git.tryp.io/tek/hix";
 
-  outputs = { hix, ... }:
-  let
-
-  in hix.lib.pro ({config, ...}: {
+  outputs = { hix, ... }: hix.lib.pro ({config, ...}: {
     ghcVersions = ["ghc810" "ghc90" "ghc92" "ghc94"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
+    gen-overrides.enable = true;
 
     envs.dev.overrides = { hackage, ... }: {
       polysemy = hackage "1.9.1.0" "05mhzjz6hz0dnxsn3cc0l6yyj5ch35gn8xfnx0a1gn3q8yljfg2a";
