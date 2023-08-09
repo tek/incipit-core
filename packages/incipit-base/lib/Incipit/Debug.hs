@@ -68,7 +68,7 @@ dbgs ::
   m ()
 dbgs a =
   debugPrintWithLoc (srcLoc callStack) (show a)
-{-# noinline dbgs_ #-}
+{-# noinline dbgs #-}
 
 -- |Print a value with a 'Show' instance in an arbitrary 'Monad', returning the value.
 dbgs_ ::
@@ -80,7 +80,7 @@ dbgs_ ::
   m a
 dbgs_ a =
   a <$ debugPrintWithLoc (srcLoc callStack) (show a)
-{-# noinline dbgs #-}
+{-# noinline dbgs_ #-}
 
 -- |Like 'Debug.Trace.trace', but with 'Text' and with source location prefix.
 tr ::
