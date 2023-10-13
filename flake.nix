@@ -3,14 +3,13 @@
 
   inputs.hix.url = "git+https://git.tryp.io/tek/hix";
 
-  outputs = { hix, ... }: hix.lib.pro ({config, ...}: {
+  outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
     ghcVersions = ["ghc92" "ghc94" "ghc96"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
     gen-overrides.enable = true;
 
     envs.ghc96.overrides = {hackage, jailbreak, ...}: {
-      polysemy = hackage "1.9.1.3" "0y339fh1jvjdjmw6xkwizd3m9bqsgnhaj56xgkz1pcmv00pmj275";
       type-errors = jailbreak;
     };
 
