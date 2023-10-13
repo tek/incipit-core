@@ -108,35 +108,8 @@ library
       UndecidableInstances
       UnicodeSyntax
       ViewPatterns
-      BangPatterns
-      BinaryLiterals
-      ConstraintKinds
-      DeriveDataTypeable
-      DeriveFoldable
-      DeriveFunctor
-      DeriveGeneric
-      DeriveLift
-      DeriveTraversable
-      DoAndIfThenElse
-      EmptyCase
-      EmptyDataDecls
-      ExistentialQuantification
-      FlexibleContexts
-      FlexibleInstances
-      GeneralizedNewtypeDeriving
-      InstanceSigs
-      KindSignatures
-      MultiParamTypeClasses
-      NamedFieldPuns
-      PatternGuards
-      PolyKinds
-      RankNTypes
-      ScopedTypeVariables
-      StandaloneDeriving
-      TupleSections
-      TypeApplications
-      TypeOperators
-      TypeSynonymInstances
+      OverloadedRecordDot
+      NoFieldSelectors
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
       base >=4.13 && <4.19
@@ -145,4 +118,4 @@ library
     , data-default ==0.7.*
     , stm
     , text
-  default-language: Haskell2010
+  default-language: GHC2021
