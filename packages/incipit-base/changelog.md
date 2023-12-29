@@ -1,4 +1,4 @@
-# Unreleased
+# 0.6.0.0
 
 * Add polymorphic type family `Undefined` that emits a `TypeError`.
 
