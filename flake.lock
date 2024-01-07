@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1700413684,
-        "narHash": "sha256-spoDbdJMiiJCrl95VBsJp4j2XM7iElVhmUvdzZcM174=",
+        "lastModified": 1704649850,
+        "narHash": "sha256-VutwLoevja0r/ZIAAR2cjuem5Gm/3wmPGDM6byX7K7Y=",
         "ref": "refs/heads/main",
-        "rev": "93eb21ac46c805479a824cbb54fda54a013d9f83",
-        "revCount": 619,
+        "rev": "436c2662ad86627acfe54587edba59002b32a724",
+        "revCount": 687,
         "type": "git",
         "url": "https://git.tryp.io/tek/hix"
       },
