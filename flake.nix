@@ -18,10 +18,15 @@
       enable = true;
       sets = "each";
       lower.enable = true;
-      latest.compiler = "ghc96";
-      latest.envs = {
-        solverOverrides = overrides96;
-        verbatim.overrides = overrides96;
+      latest = {
+        compiler = "ghc96";
+        envs = {
+          solverOverrides = overrides96;
+          verbatim.overrides = overrides96;
+        };
+      };
+      forceBounds = {
+        base.upper = "4.20";
       };
     };
     internal.hixCli.dev = true;
@@ -45,7 +50,6 @@
       author = "Torsten Schmits";
       default-extensions = ["NoImplicitPrelude"];
       paths = false;
-      base = "base >= 4.13 && < 4.20";
       meta = {
         maintainer = "hackage@tryp.io";
         category = "Prelude";
