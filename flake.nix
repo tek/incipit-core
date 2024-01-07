@@ -3,15 +3,33 @@
 
   inputs.hix.url = "git+https://git.tryp.io/tek/hix";
 
-  outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
+  outputs = {hix, ...}: hix.lib.pro ({config, ...}: let
+
+    overrides96 = {jailbreak, ...}: { type-errors = jailbreak; };
+
+  in {
     ghcVersions = ["ghc92" "ghc94" "ghc96" "ghc98"];
+    compat.versions = ["ghc94"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
-    gen-overrides.enable = true;
-
-    envs.ghc96.overrides = {hackage, jailbreak, ...}: {
-      type-errors = jailbreak;
+    managed = {
+      enable = true;
+      sets = "each";
+      lower.enable = true;
+      latest = {
+        compiler = "ghc96";
+        envs = {
+          solverOverrides = overrides96;
+          verbatim.overrides = overrides96;
+        };
+      };
+      forceBounds = {
+        base.upper = "4.20";
+      };
     };
+    internal.hixCli.dev = true;
+
+    envs.ghc96.overrides = overrides96;
 
     envs.ghc98.overrides = {super, hackage, jailbreak, ...}: {
       th-abstraction = hackage "0.6.0.0" "1w07ysxrbjm1rhlg9nhlq5y72s5wr4vqmcy99chvyb56wka0grbq";
@@ -30,7 +48,6 @@
       author = "Torsten Schmits";
       default-extensions = ["NoImplicitPrelude"];
       paths = false;
-      base = "base >= 4.13 && < 4.20";
       meta = {
         maintainer = "hackage@tryp.io";
         category = "Prelude";
