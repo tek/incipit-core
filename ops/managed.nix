@@ -40,11 +40,11 @@
   versions = {
     latest-incipit-base = {
       base = "4.18.1.0";
-      bytestring = "0.12.0.2";
+      bytestring = "0.12.1.0";
       containers = "0.7";
       data-default = "0.7.1.1";
       stm = "2.5.3.0";
-      text = "2.1";
+      text = "2.1.1";
     };
     latest-incipit-core = {
       base = "4.18.1.0";
@@ -84,8 +84,8 @@
         hash = "18llmadh8wi69ra4hmlpv22lmfj450sf3aj15751dlmlg6rymfsl";
       };
       bytestring = {
-        version = "0.12.0.2";
-        hash = "1mk2hna4a69b4xx8rvrdfcfnn49kcsf90w1vj2sr85v6wl3im20p";
+        version = "0.12.1.0";
+        hash = "0bh2vq2817r6aq7pgq1jjp3aw77kvadynqlbw4058d0pay9nm2m2";
       };
       containers = {
         version = "0.7";
@@ -104,8 +104,8 @@
         hash = "0xdqwr1pz90baj52v3fcbzafhx040glgv3cnvfqx7zyn34l2z7a4";
       };
       text = {
-        version = "2.1";
-        hash = "092yi4ig77876sf7xm8ibdmcys7qnw2a1m7iv3xyy1a01nfgml60";
+        version = "2.1.1";
+        hash = "0b3cqb7n016gxnkkk94mlkl2z0mgjcl1qilpm62kmr1r9cq7vmz6";
       };
     };
     latest-incipit-core = {
