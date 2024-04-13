@@ -43,7 +43,7 @@
       bytestring = "0.12.1.0";
       containers = "0.7";
       data-default = "0.7.1.1";
-      stm = "2.5.3.0";
+      stm = "2.5.3.1";
       text = "2.1.1";
     };
     latest-incipit-core = {
@@ -100,8 +100,8 @@
         hash = "08m81yh6g2lnxxii67pw6qgb685vypadk4ijlpxgwpvjympn7568";
       };
       stm = {
-        version = "2.5.3.0";
-        hash = "0xdqwr1pz90baj52v3fcbzafhx040glgv3cnvfqx7zyn34l2z7a4";
+        version = "2.5.3.1";
+        hash = "0lcxifbwxi1fmrnpvlr1ychiy847n51xdhk9y4c9cm55w4nms6bz";
       };
       text = {
         version = "2.1.1";
