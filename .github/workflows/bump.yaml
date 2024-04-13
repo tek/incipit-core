@@ -2,6 +2,7 @@ name: bump
 on:
   schedule:
     - cron: '45 6 * * 6'
+  workflow_dispatch:
 permissions:
   contents: write
   pull-requests: write
