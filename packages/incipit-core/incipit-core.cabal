@@ -1,6 +1,6 @@
 cabal-version: 2.2
 
--- This file has been generated from package.yaml by hpack version 0.35.2.
+-- This file has been generated from package.yaml by hpack version 0.36.0.
 --
 -- see: https://github.com/sol/hpack
 
@@ -101,6 +101,6 @@ library
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
       base >=4.16.4.0 && <4.20
-    , incipit-base
+    , incipit-base ==0.6.0.0
     , polysemy >=1.6.0.0 && <1.10
   default-language: GHC2021
