@@ -13,9 +13,7 @@
       enable = true;
       sets = "each";
       lower.enable = true;
-      latest = {
-        compiler = "ghc98";
-      };
+      latest.compiler = "ghc98";
       forceBounds = {
         base.upper = "4.20";
       };
