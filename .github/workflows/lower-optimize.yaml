@@ -1,14 +1,11 @@
-name: bump
-on:
-  workflow_dispatch:
-  schedule:
-  - cron: '45 6 * * 6'
+name: lower-optimize
+on: workflow_dispatch
 permissions:
   contents: write
   pull-requests: write
   id-token: write
 jobs:
-  bump-pr:
+  lower-pr:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -22,7 +19,7 @@ jobs:
         name: tek
         signingKey: ${{ secrets.CACHIX_SIGNING_KEY }}
     - id: bounds
-      run: nix run .#bump -- --output=ga-pr
+      run: nix run .#lower.optimize -- --output=ga-pr
     - name: pr
       if: steps.bounds.outputs.commit-message
       uses: peter-evans/create-pull-request@v5
