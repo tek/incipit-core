@@ -158,6 +158,24 @@ mkDerivation {
 ;
 };
 latest-incipit-core = {
+  cabal-doctest = {
+  meta = {
+    sha256 = "0irxfxy1qw7sif4408xdhqycddb4hs3hcf6xfxm65glsnmnmwl2i";
+    ver = "1.0.9";
+  };
+  drv = { mkDerivation, base, Cabal, directory, filepath, lib }:
+mkDerivation {
+  pname = "cabal-doctest";
+  version = "1.0.9";
+  src = /nix/store/zvv4lgrqgjx826ryk6697617pd3xpr7s-source;
+  libraryHaskellDepends = [ base Cabal directory filepath ];
+  homepage = "https://github.com/haskellari/cabal-doctest";
+  description = "A Setup.hs helper for running doctests";
+  license = lib.licenses.bsd3;
+}
+;
+}
+;
   data-default = {
   meta = {
     sha256 = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
@@ -280,6 +298,38 @@ mkDerivation {
   src = /nix/store/p4kn2ckrnfwifraay13ldf76m67sxi2g-source;
   libraryHaskellDepends = [ base ];
   description = "locale library";
+  license = lib.licenses.bsd3;
+}
+;
+}
+;
+  polysemy = {
+  meta = {
+    sha256 = "00dq1ffsd9bld5zag4l2qssbmm4yb234cirsn5f19fmx43cdgngl";
+    ver = "1.9.2.0";
+  };
+  drv = { mkDerivation, async, base, Cabal, cabal-doctest, containers
+, doctest, first-class-families, hspec, hspec-discover
+, inspection-testing, lib, mtl, stm, syb, template-haskell
+, th-abstraction, transformers, type-errors, unagi-chan
+}:
+mkDerivation {
+  pname = "polysemy";
+  version = "1.9.2.0";
+  src = /nix/store/rrd35xyn2gzkvqid5k43dsqw5z0yb21d-source;
+  setupHaskellDepends = [ base Cabal cabal-doctest ];
+  libraryHaskellDepends = [
+    async base containers first-class-families mtl stm syb
+    template-haskell th-abstraction transformers type-errors unagi-chan
+  ];
+  testHaskellDepends = [
+    async base containers doctest first-class-families hspec
+    hspec-discover inspection-testing mtl stm syb template-haskell
+    th-abstraction transformers type-errors unagi-chan
+  ];
+  testToolDepends = [ hspec-discover ];
+  homepage = "https://github.com/polysemy-research/polysemy#readme";
+  description = "Higher-order, low-boilerplate free monads";
   license = lib.licenses.bsd3;
 }
 ;
