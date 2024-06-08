@@ -48,7 +48,7 @@
     };
     latest-incipit-core = {
       base = "4.19.1.0";
-      polysemy = "1.9.1.3";
+      polysemy = "1.9.2.0";
     };
     lower-incipit-base = {
       base = "4.16.4.0";
@@ -105,6 +105,10 @@
       };
     };
     latest-incipit-core = {
+      cabal-doctest = {
+        version = "1.0.9";
+        hash = "0irxfxy1qw7sif4408xdhqycddb4hs3hcf6xfxm65glsnmnmwl2i";
+      };
       data-default = {
         version = "0.7.1.1";
         hash = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
@@ -132,6 +136,10 @@
       old-locale = {
         version = "1.0.0.7";
         hash = "0gkq0gmdqfhb7xvb52hqpp79iz9wxk4kprvqdpwlds8a2i2flqm3";
+      };
+      polysemy = {
+        version = "1.9.2.0";
+        hash = "00dq1ffsd9bld5zag4l2qssbmm4yb234cirsn5f19fmx43cdgngl";
       };
     };
     lower-incipit-base = {
