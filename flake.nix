@@ -4,7 +4,7 @@
   inputs.hix.url = "git+https://git.tryp.io/tek/hix";
 
   outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
-    ghcVersions = ["ghc92" "ghc94" "ghc96" "ghc98"];
+    ghcVersions = ["ghc92" "ghc94" "ghc96" "ghc98" "ghc910"];
     compat.versions = ["ghc94" "ghc96"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
@@ -15,7 +15,7 @@
       lower.enable = true;
       latest.compiler = "ghc98";
       forceBounds = {
-        base.upper = "4.20";
+        base.upper = "4.21";
       };
     };
 

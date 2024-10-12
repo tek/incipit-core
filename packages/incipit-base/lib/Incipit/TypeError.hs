@@ -1,4 +1,7 @@
-{-# language StandaloneKindSignatures #-}
+{-# language StandaloneKindSignatures, CPP #-}
+#if __GLASGOW_HASKELL__ >= 910
+{-# language TypeAbstractions #-}
+#endif
 
 -- | Description: 'ErrorMessage' concatenation operators, stolen from type-errors-pretty.
 module Incipit.TypeError where
@@ -28,5 +31,9 @@ type family ToErrorMessage t where
 
 -- | Placeholder similar to 'IncipitBase.undefined'.
 type Undefined :: k
+#if __GLASGOW_HASKELL__ >= 910
+type family Undefined @k where
+#else
 type family Undefined where
+#endif
   Undefined = TypeError ('Text "undefined")

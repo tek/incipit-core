@@ -1,4 +1,5 @@
 {-# options_haddock prune #-}
+{-# language CPP #-}
 
 {- |
 Copyright:  (c) 2016 Stephen Diehl
@@ -47,6 +48,9 @@ import GHC.TypeLits (ErrorMessage (..), Symbol, TypeError)
 import Text.Read (Read, readMaybe, reads)
 
 import Incipit.Base (Constraint, Type)
+#if __GLASGOW_HASKELL__ >= 904
+import Incipit.Base (type (~))
+#endif
 
 
 -- $setup

@@ -1,3 +1,5 @@
+{-# language CPP #-}
+
 -- |Reexports from @base@.
 module Incipit.Base (
   module Control.Applicative,
@@ -32,6 +34,9 @@ module Incipit.Base (
   module Data.Traversable,
   module Data.Tuple,
   module Data.Typeable,
+#if __GLASGOW_HASKELL__ >= 904
+  module Data.Type.Equality,
+#endif
   module Data.Void,
   module Data.Word,
   module GHC.Base,
@@ -156,6 +161,9 @@ import Data.Proxy (Proxy (..))
 import Data.Semigroup (Semigroup (..))
 import Data.Traversable (Traversable (..), for, forM, mapAccumL, mapAccumR)
 import Data.Tuple (curry, fst, snd, swap, uncurry)
+#if __GLASGOW_HASKELL__ >= 904
+import Data.Type.Equality (type (~))
+#endif
 import Data.Typeable (Typeable)
 import Data.Void (Void)
 import Data.Word (Word, Word16, Word32, Word64, Word8)
