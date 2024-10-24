@@ -15,7 +15,7 @@
       };
       data-default = {
         lower = "0.2";
-        upper = "0.8";
+        upper = "0.9";
       };
       stm = {
         lower = "2.5.0.2";
@@ -42,7 +42,7 @@
       base = "4.19.1.0";
       bytestring = "0.12.1.0";
       containers = "0.7";
-      data-default = "0.7.1.1";
+      data-default = "0.8.0.0";
       stm = "2.5.3.1";
       text = "2.1.1";
     };
@@ -80,20 +80,16 @@
   overrides = {
     latest-incipit-base = {
       binary = {
-        version = "0.8.9.1";
-        hash = "18llmadh8wi69ra4hmlpv22lmfj450sf3aj15751dlmlg6rymfsl";
+        version = "0.8.9.2";
+        hash = "04ki6paqf2hxqd5mr2rgd01mqvd1klg086hy5mmbs5aslniwa3hz";
       };
       containers = {
         version = "0.7";
         hash = "15i7w8xavx83b0gdiq5a7g3m8k4ghmcy67yhx4b4119x7r4j7w4n";
       };
       data-default = {
-        version = "0.7.1.1";
-        hash = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
-      };
-      data-default-instances-containers = {
-        version = "0.0.1";
-        hash = "08m81yh6g2lnxxii67pw6qgb685vypadk4ijlpxgwpvjympn7568";
+        version = "0.8.0.0";
+        hash = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
       };
       stm = {
         version = "2.5.3.1";

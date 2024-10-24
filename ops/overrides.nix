@@ -16,8 +16,8 @@ hls = {
 latest-incipit-base = {
   binary = {
   meta = {
-    sha256 = "18llmadh8wi69ra4hmlpv22lmfj450sf3aj15751dlmlg6rymfsl";
-    ver = "0.8.9.1";
+    sha256 = "04ki6paqf2hxqd5mr2rgd01mqvd1klg086hy5mmbs5aslniwa3hz";
+    ver = "0.8.9.2";
   };
   drv = { mkDerivation, array, attoparsec, base, base-orphans, bytestring
 , Cabal, cereal, containers, criterion, deepseq, directory
@@ -27,8 +27,8 @@ latest-incipit-base = {
 }:
 mkDerivation {
   pname = "binary";
-  version = "0.8.9.1";
-  src = /nix/store/a153nvp6jddwb8phz47kj7gq29219kw9-source;
+  version = "0.8.9.2";
+  src = /nix/store/2h5y2n289a04v7miga4xm4qplgyj2is4-source;
   libraryHaskellDepends = [ array base bytestring containers ];
   testHaskellDepends = [
     array base base-orphans bytestring Cabal containers directory
@@ -66,39 +66,17 @@ mkDerivation {
 ;
   data-default = {
   meta = {
-    sha256 = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
-    ver = "0.7.1.1";
+    sha256 = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
+    ver = "0.8.0.0";
   };
-  drv = { mkDerivation, base, data-default-class
-, data-default-instances-containers, data-default-instances-dlist
-, data-default-instances-old-locale, lib
-}:
+  drv = { mkDerivation, base, containers, lib, mtl }:
 mkDerivation {
   pname = "data-default";
-  version = "0.7.1.1";
-  src = /nix/store/1g4b253cf6xhns9k066h7rszbqzcsb3c-source;
-  libraryHaskellDepends = [
-    base data-default-class data-default-instances-containers
-    data-default-instances-dlist data-default-instances-old-locale
-  ];
+  version = "0.8.0.0";
+  src = /nix/store/7786mf6cf8mvaz8rm5d6539c6s3wdxsq-source;
+  libraryHaskellDepends = [ base containers ];
+  testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  data-default-instances-containers = {
-  meta = {
-    sha256 = "08m81yh6g2lnxxii67pw6qgb685vypadk4ijlpxgwpvjympn7568";
-    ver = "0.0.1";
-  };
-  drv = { mkDerivation, base, containers, data-default-class, lib }:
-mkDerivation {
-  pname = "data-default-instances-containers";
-  version = "0.0.1";
-  src = /nix/store/d6ndadxkf4wmnyhgd7vxmq50pczgi91a-source;
-  libraryHaskellDepends = [ base containers data-default-class ];
-  description = "Default instances for types in containers";
   license = lib.licenses.bsd3;
 }
 ;
