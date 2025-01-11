@@ -47,6 +47,32 @@ mkDerivation {
 ;
 }
 ;
+  bytestring = {
+  meta = {
+    sha256 = "1b8nb46ylwi1nxcnvpncm47dw3x91l3avc7za4c6x9snaz1q84kc";
+    ver = "0.12.2.0";
+  };
+  drv = { mkDerivation, base, deepseq, ghc-prim, lib, QuickCheck, random
+, syb, tasty, tasty-bench, tasty-quickcheck, template-haskell
+, transformers
+}:
+mkDerivation {
+  pname = "bytestring";
+  version = "0.12.2.0";
+  src = /nix/store/mkwx4bd9732y4y54qkg1gsv2zj7khkd4-source;
+  libraryHaskellDepends = [ base deepseq ghc-prim template-haskell ];
+  testHaskellDepends = [
+    base deepseq QuickCheck syb tasty tasty-quickcheck template-haskell
+    transformers
+  ];
+  benchmarkHaskellDepends = [ base deepseq random tasty-bench ];
+  homepage = "https://github.com/haskell/bytestring";
+  description = "Fast, compact, strict and lazy byte strings with a list interface";
+  license = lib.licenses.bsd3;
+}
+;
+}
+;
   containers = {
   meta = {
     sha256 = "15i7w8xavx83b0gdiq5a7g3m8k4ghmcy67yhx4b4119x7r4j7w4n";
@@ -102,8 +128,8 @@ mkDerivation {
 ;
   text = {
   meta = {
-    sha256 = "0b3cqb7n016gxnkkk94mlkl2z0mgjcl1qilpm62kmr1r9cq7vmz6";
-    ver = "2.1.1";
+    sha256 = "0anpr011ga34ggsa4v4xfip5mgbgwr2nfdqsdciz71scgcxbr87g";
+    ver = "2.1.2";
   };
   drv = { mkDerivation, array, base, binary, bytestring, containers
 , deepseq, directory, filepath, ghc-prim, lib, QuickCheck
@@ -113,14 +139,14 @@ mkDerivation {
 }:
 mkDerivation {
   pname = "text";
-  version = "2.1.1";
-  src = /nix/store/sibrqizv42msgv1av232jwnnsqpyzkrv-source;
+  version = "2.1.2";
+  src = /nix/store/q6ahbsdrknkyk2avcsikxylhahmz2bls-source;
   libraryHaskellDepends = [
     array base binary bytestring deepseq ghc-prim system-cxx-std-lib
     template-haskell
   ];
   testHaskellDepends = [
-    base bytestring deepseq directory ghc-prim QuickCheck tasty
+    base binary bytestring deepseq directory ghc-prim QuickCheck tasty
     tasty-hunit tasty-inspection-testing tasty-quickcheck
     template-haskell transformers
   ];
