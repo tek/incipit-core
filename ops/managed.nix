@@ -39,7 +39,7 @@
   };
   versions = {
     latest-incipit-base = {
-      base = "4.19.1.0";
+      base = "4.19.2.0";
       bytestring = "0.12.2.0";
       containers = "0.7";
       data-default = "0.8.0.0";
@@ -47,7 +47,7 @@
       text = "2.1.2";
     };
     latest-incipit-core = {
-      base = "4.19.1.0";
+      base = "4.19.2.0";
       polysemy = "1.9.2.0";
     };
     lower-incipit-base = {
@@ -95,10 +95,6 @@
         version = "0.8.0.0";
         hash = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
       };
-      stm = {
-        version = "2.5.3.1";
-        hash = "0lcxifbwxi1fmrnpvlr1ychiy847n51xdhk9y4c9cm55w4nms6bz";
-      };
       text = {
         version = "2.1.2";
         hash = "0anpr011ga34ggsa4v4xfip5mgbgwr2nfdqsdciz71scgcxbr87g";
@@ -136,10 +132,6 @@
       old-locale = {
         version = "1.0.0.7";
         hash = "0gkq0gmdqfhb7xvb52hqpp79iz9wxk4kprvqdpwlds8a2i2flqm3";
-      };
-      polysemy = {
-        version = "1.9.2.0";
-        hash = "00dq1ffsd9bld5zag4l2qssbmm4yb234cirsn5f19fmx43cdgngl";
       };
     };
     lower-incipit-base = {
