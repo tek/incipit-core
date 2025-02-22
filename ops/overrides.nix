@@ -106,24 +106,6 @@ mkDerivation {
 ;
 }
 ;
-  stm = {
-  meta = {
-    sha256 = "0lcxifbwxi1fmrnpvlr1ychiy847n51xdhk9y4c9cm55w4nms6bz";
-    ver = "2.5.3.1";
-  };
-  drv = { mkDerivation, array, base, lib }:
-mkDerivation {
-  pname = "stm";
-  version = "2.5.3.1";
-  src = /nix/store/vnqi8vxg5qszrznyasv1acijsyj8c8zp-source;
-  libraryHaskellDepends = [ array base ];
-  homepage = "https://wiki.haskell.org/Software_transactional_memory";
-  description = "Software Transactional Memory";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
   text = {
   meta = {
     sha256 = "0anpr011ga34ggsa4v4xfip5mgbgwr2nfdqsdciz71scgcxbr87g";
@@ -302,38 +284,6 @@ mkDerivation {
   src = /nix/store/p4kn2ckrnfwifraay13ldf76m67sxi2g-source;
   libraryHaskellDepends = [ base ];
   description = "locale library";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  polysemy = {
-  meta = {
-    sha256 = "00dq1ffsd9bld5zag4l2qssbmm4yb234cirsn5f19fmx43cdgngl";
-    ver = "1.9.2.0";
-  };
-  drv = { mkDerivation, async, base, Cabal, cabal-doctest, containers
-, doctest, first-class-families, hspec, hspec-discover
-, inspection-testing, lib, mtl, stm, syb, template-haskell
-, th-abstraction, transformers, type-errors, unagi-chan
-}:
-mkDerivation {
-  pname = "polysemy";
-  version = "1.9.2.0";
-  src = /nix/store/rrd35xyn2gzkvqid5k43dsqw5z0yb21d-source;
-  setupHaskellDepends = [ base Cabal cabal-doctest ];
-  libraryHaskellDepends = [
-    async base containers first-class-families mtl stm syb
-    template-haskell th-abstraction transformers type-errors unagi-chan
-  ];
-  testHaskellDepends = [
-    async base containers doctest first-class-families hspec
-    hspec-discover inspection-testing mtl stm syb template-haskell
-    th-abstraction transformers type-errors unagi-chan
-  ];
-  testToolDepends = [ hspec-discover ];
-  homepage = "https://github.com/polysemy-research/polysemy#readme";
-  description = "Higher-order, low-boilerplate free monads";
   license = lib.licenses.bsd3;
 }
 ;
