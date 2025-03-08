@@ -11,7 +11,7 @@
       };
       containers = {
         lower = "0.6.3.1";
-        upper = "0.8";
+        upper = "0.9";
       };
       data-default = {
         lower = "0.2";
@@ -41,7 +41,7 @@
     latest-incipit-base = {
       base = "4.19.2.0";
       bytestring = "0.12.2.0";
-      containers = "0.7";
+      containers = "0.8";
       data-default = "0.8.0.0";
       stm = "2.5.3.1";
       text = "2.1.2";
@@ -88,8 +88,8 @@
         hash = "1b8nb46ylwi1nxcnvpncm47dw3x91l3avc7za4c6x9snaz1q84kc";
       };
       containers = {
-        version = "0.7";
-        hash = "15i7w8xavx83b0gdiq5a7g3m8k4ghmcy67yhx4b4119x7r4j7w4n";
+        version = "0.8";
+        hash = "06mmyljfj41hg5rzr9d2fb61gd2a11waicpk7dcy3hxrqvfgs8yc";
       };
       data-default = {
         version = "0.8.0.0";

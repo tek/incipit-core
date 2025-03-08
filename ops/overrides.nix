@@ -73,15 +73,16 @@ mkDerivation {
 ;
   containers = {
   meta = {
-    sha256 = "15i7w8xavx83b0gdiq5a7g3m8k4ghmcy67yhx4b4119x7r4j7w4n";
-    ver = "0.7";
+    sha256 = "06mmyljfj41hg5rzr9d2fb61gd2a11waicpk7dcy3hxrqvfgs8yc";
+    ver = "0.8";
   };
   drv = { mkDerivation, array, base, deepseq, lib, template-haskell }:
 mkDerivation {
   pname = "containers";
-  version = "0.7";
-  src = /nix/store/8b19g8q0xnk4m7mgy2qxyd80xqd0cg6k-source;
+  version = "0.8";
+  src = /nix/store/rdycsvan59f6xwgs0z7r1k5m4qxnm8zx-source;
   libraryHaskellDepends = [ array base deepseq template-haskell ];
+  homepage = "https://github.com/haskell/containers";
   description = "Assorted concrete container types";
   license = lib.licenses.bsd3;
 }
