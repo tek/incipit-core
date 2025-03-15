@@ -444,42 +444,18 @@ mkDerivation {
 ;
 };
 lower-incipit-core = {
-  QuickCheck = {
-  meta = {
-    sha256 = "18451rdmih1jkrsrckdcix71zqihc4h2caic7qzizxjg4hqpapji";
-    ver = "2.14.3";
-  };
-  drv = { mkDerivation, base, containers, deepseq, lib, process, random
-, splitmix, template-haskell, transformers
-}:
-mkDerivation {
-  pname = "QuickCheck";
-  version = "2.14.3";
-  src = /nix/store/kh42dp9c3b6mjrf9cpskg33vgxfr598p-source;
-  libraryHaskellDepends = [
-    base containers deepseq random splitmix template-haskell
-    transformers
-  ];
-  testHaskellDepends = [ base deepseq process ];
-  homepage = "https://github.com/nick8325/quickcheck";
-  description = "Automatic testing of Haskell programs";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
   cabal-doctest = {
   meta = {
-    sha256 = "0irxfxy1qw7sif4408xdhqycddb4hs3hcf6xfxm65glsnmnmwl2i";
-    ver = "1.0.9";
+    sha256 = "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
+    ver = "1.0.11";
   };
   drv = { mkDerivation, base, Cabal, directory, filepath, lib }:
 mkDerivation {
   pname = "cabal-doctest";
-  version = "1.0.9";
-  src = /nix/store/zvv4lgrqgjx826ryk6697617pd3xpr7s-source;
+  version = "1.0.11";
+  src = /nix/store/jq5gnm6hwmylv7wndgd4v11z6hv30y0g-source;
   libraryHaskellDepends = [ base Cabal directory filepath ];
-  homepage = "https://github.com/haskellari/cabal-doctest";
+  homepage = "https://github.com/ulidtko/cabal-doctest";
   description = "A Setup.hs helper for running doctests";
   license = lib.licenses.bsd3;
 }
@@ -488,126 +464,17 @@ mkDerivation {
 ;
   data-default = {
   meta = {
-    sha256 = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
-    ver = "0.7.1.1";
+    sha256 = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
+    ver = "0.8.0.0";
   };
-  drv = { mkDerivation, base, data-default-class
-, data-default-instances-containers, data-default-instances-dlist
-, data-default-instances-old-locale, lib
-}:
+  drv = { mkDerivation, base, containers, lib, mtl }:
 mkDerivation {
   pname = "data-default";
-  version = "0.7.1.1";
-  src = /nix/store/1g4b253cf6xhns9k066h7rszbqzcsb3c-source;
-  libraryHaskellDepends = [
-    base data-default-class data-default-instances-containers
-    data-default-instances-dlist data-default-instances-old-locale
-  ];
+  version = "0.8.0.0";
+  src = /nix/store/7786mf6cf8mvaz8rm5d6539c6s3wdxsq-source;
+  libraryHaskellDepends = [ base containers ];
+  testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  data-default-class = {
-  meta = {
-    sha256 = "17dslsh6p6wmyh12fk04vvp3pqb4q2ybdz8g7qnzm8xc03naryhd";
-    ver = "0.1.2.0";
-  };
-  drv = { mkDerivation, base, lib }:
-mkDerivation {
-  pname = "data-default-class";
-  version = "0.1.2.0";
-  src = /nix/store/f83lcz94w8n084l1z7bza83zb1g4avam-source;
-  libraryHaskellDepends = [ base ];
-  description = "A class for types with a default value";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  data-default-instances-containers = {
-  meta = {
-    sha256 = "08m81yh6g2lnxxii67pw6qgb685vypadk4ijlpxgwpvjympn7568";
-    ver = "0.0.1";
-  };
-  drv = { mkDerivation, base, containers, data-default-class, lib }:
-mkDerivation {
-  pname = "data-default-instances-containers";
-  version = "0.0.1";
-  src = /nix/store/d6ndadxkf4wmnyhgd7vxmq50pczgi91a-source;
-  libraryHaskellDepends = [ base containers data-default-class ];
-  description = "Default instances for types in containers";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  data-default-instances-dlist = {
-  meta = {
-    sha256 = "073v298k2j6qgkkmmh6p9l40nhmbcxniyd3s9w4ymh7cdxwwz39l";
-    ver = "0.0.1";
-  };
-  drv = { mkDerivation, base, data-default-class, dlist, lib }:
-mkDerivation {
-  pname = "data-default-instances-dlist";
-  version = "0.0.1";
-  src = /nix/store/55l8pqxig0rarkszcdc9mwd9kkbcdi3l-source;
-  libraryHaskellDepends = [ base data-default-class dlist ];
-  description = "Default instances for types in dlist";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  data-default-instances-old-locale = {
-  meta = {
-    sha256 = "163d6jsfd24g51wn87dpkdzwp7qjciqb5yapm4wv4j7rdazbgpmm";
-    ver = "0.0.1";
-  };
-  drv = { mkDerivation, base, data-default-class, lib, old-locale }:
-mkDerivation {
-  pname = "data-default-instances-old-locale";
-  version = "0.0.1";
-  src = /nix/store/j0dx58a36867wvbzznyp5gf56bjqrp3a-source;
-  libraryHaskellDepends = [ base data-default-class old-locale ];
-  description = "Default instances for types in old-locale";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  dlist = {
-  meta = {
-    sha256 = "1lhckd8srlbjh17krqx0xkp10r9ipwc9lhlwrzxihkdwzsk0as0g";
-    ver = "1.0";
-  };
-  drv = { mkDerivation, base, deepseq, lib, QuickCheck }:
-mkDerivation {
-  pname = "dlist";
-  version = "1.0";
-  src = /nix/store/ylz0g4nxsgp7zzcb86xsm9k3m17cxfzx-source;
-  libraryHaskellDepends = [ base deepseq ];
-  testHaskellDepends = [ base QuickCheck ];
-  homepage = "https://github.com/spl/dlist";
-  description = "Difference lists";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  old-locale = {
-  meta = {
-    sha256 = "0gkq0gmdqfhb7xvb52hqpp79iz9wxk4kprvqdpwlds8a2i2flqm3";
-    ver = "1.0.0.7";
-  };
-  drv = { mkDerivation, base, lib }:
-mkDerivation {
-  pname = "old-locale";
-  version = "1.0.0.7";
-  src = /nix/store/p4kn2ckrnfwifraay13ldf76m67sxi2g-source;
-  libraryHaskellDepends = [ base ];
-  description = "locale library";
   license = lib.licenses.bsd3;
 }
 ;
@@ -615,37 +482,79 @@ mkDerivation {
 ;
   polysemy = {
   meta = {
-    sha256 = "15k51ysrfcbkww1562g8zvrlzymlk2rxhcsz9ipsb0q6h571qgvf";
-    ver = "1.6.0.0";
+    sha256 = "0jgaqmcf4l8h58g1y576rrr74sii60mymqxh3ii3clnxcllp3p01";
+    ver = "1.8.0.0";
   };
   drv = { mkDerivation, async, base, Cabal, cabal-doctest, containers
-, criterion, doctest, first-class-families, free, freer-simple
-, hspec, hspec-discover, inspection-testing, lib, mtl, QuickCheck
-, stm, syb, template-haskell, th-abstraction, transformers
-, type-errors, unagi-chan
+, doctest, first-class-families, hspec, hspec-discover
+, inspection-testing, lib, mtl, stm, syb, template-haskell
+, th-abstraction, transformers, type-errors, unagi-chan
 }:
 mkDerivation {
   pname = "polysemy";
-  version = "1.6.0.0";
-  src = /nix/store/kmala48rqnh42ls38mb9qfx49ssbi3js-source;
+  version = "1.8.0.0";
+  src = /nix/store/f0kl6nv6n8db37mqi7rzx2sf36lfssx7-source;
   setupHaskellDepends = [ base Cabal cabal-doctest ];
   libraryHaskellDepends = [
-    async base containers first-class-families mtl QuickCheck stm syb
+    async base containers first-class-families mtl stm syb
     template-haskell th-abstraction transformers type-errors unagi-chan
   ];
   testHaskellDepends = [
     async base containers doctest first-class-families hspec
-    inspection-testing mtl QuickCheck stm syb template-haskell
+    hspec-discover inspection-testing mtl stm syb template-haskell
     th-abstraction transformers type-errors unagi-chan
   ];
   testToolDepends = [ hspec-discover ];
-  benchmarkHaskellDepends = [
-    async base containers criterion first-class-families free
-    freer-simple mtl QuickCheck stm syb template-haskell th-abstraction
-    transformers type-errors unagi-chan
-  ];
   homepage = "https://github.com/polysemy-research/polysemy#readme";
   description = "Higher-order, low-boilerplate free monads";
+  license = lib.licenses.bsd3;
+}
+;
+}
+;
+  th-abstraction = {
+  meta = {
+    sha256 = "19nh7a9b4yif6sijp6xns6xlxcr1mcyrqx3cfbp5bdm7mkbda7a9";
+    ver = "0.4.5.0";
+  };
+  drv = { mkDerivation, base, containers, ghc-prim, lib, template-haskell
+}:
+mkDerivation {
+  pname = "th-abstraction";
+  version = "0.4.5.0";
+  src = /nix/store/60fdh9cnrz0zzin9ali21npxs10n3f51-source;
+  libraryHaskellDepends = [
+    base containers ghc-prim template-haskell
+  ];
+  testHaskellDepends = [ base containers template-haskell ];
+  homepage = "https://github.com/glguy/th-abstraction";
+  description = "Nicer interface for reified information about data types";
+  license = lib.licenses.isc;
+}
+;
+}
+;
+  type-errors = {
+  meta = {
+    sha256 = "09rkyqhx8jnzqiq7gpcm5jd1xd435h0ma0b2sff18lk31qv01x6g";
+    ver = "0.2.0.2";
+  };
+  drv = { mkDerivation, base, doctest, first-class-families, lib, syb
+, template-haskell, th-abstraction
+}:
+mkDerivation {
+  pname = "type-errors";
+  version = "0.2.0.2";
+  src = /nix/store/kiz1m5rj1riyf995rgipyr4g9g8xlnni-source;
+  libraryHaskellDepends = [
+    base first-class-families syb template-haskell th-abstraction
+  ];
+  testHaskellDepends = [
+    base doctest first-class-families syb template-haskell
+    th-abstraction
+  ];
+  homepage = "https://github.com/isovector/type-errors#readme";
+  description = "Tools for writing better type errors";
   license = lib.licenses.bsd3;
 }
 ;

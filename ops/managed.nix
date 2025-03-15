@@ -28,11 +28,11 @@
     };
     incipit-core = {
       base = {
-        lower = "4.16.4.0";
+        lower = "4.17.2.1";
         upper = "4.22";
       };
       polysemy = {
-        lower = "1.6.0.0";
+        lower = "1.8.0.0";
         upper = "1.10";
       };
     };
@@ -59,8 +59,8 @@
       text = "1.2.5.0";
     };
     lower-incipit-core = {
-      base = "4.16.4.0";
-      polysemy = "1.6.0.0";
+      base = "4.17.2.1";
+      polysemy = "1.8.0.0";
     };
   };
   initial = {
@@ -153,45 +153,25 @@
       };
     };
     lower-incipit-core = {
-      QuickCheck = {
-        version = "2.14.3";
-        hash = "18451rdmih1jkrsrckdcix71zqihc4h2caic7qzizxjg4hqpapji";
-      };
       cabal-doctest = {
-        version = "1.0.9";
-        hash = "0irxfxy1qw7sif4408xdhqycddb4hs3hcf6xfxm65glsnmnmwl2i";
+        version = "1.0.11";
+        hash = "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
       };
       data-default = {
-        version = "0.7.1.1";
-        hash = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
-      };
-      data-default-class = {
-        version = "0.1.2.0";
-        hash = "17dslsh6p6wmyh12fk04vvp3pqb4q2ybdz8g7qnzm8xc03naryhd";
-      };
-      data-default-instances-containers = {
-        version = "0.0.1";
-        hash = "08m81yh6g2lnxxii67pw6qgb685vypadk4ijlpxgwpvjympn7568";
-      };
-      data-default-instances-dlist = {
-        version = "0.0.1";
-        hash = "073v298k2j6qgkkmmh6p9l40nhmbcxniyd3s9w4ymh7cdxwwz39l";
-      };
-      data-default-instances-old-locale = {
-        version = "0.0.1";
-        hash = "163d6jsfd24g51wn87dpkdzwp7qjciqb5yapm4wv4j7rdazbgpmm";
-      };
-      dlist = {
-        version = "1.0";
-        hash = "1lhckd8srlbjh17krqx0xkp10r9ipwc9lhlwrzxihkdwzsk0as0g";
-      };
-      old-locale = {
-        version = "1.0.0.7";
-        hash = "0gkq0gmdqfhb7xvb52hqpp79iz9wxk4kprvqdpwlds8a2i2flqm3";
+        version = "0.8.0.0";
+        hash = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
       };
       polysemy = {
-        version = "1.6.0.0";
-        hash = "15k51ysrfcbkww1562g8zvrlzymlk2rxhcsz9ipsb0q6h571qgvf";
+        version = "1.8.0.0";
+        hash = "0jgaqmcf4l8h58g1y576rrr74sii60mymqxh3ii3clnxcllp3p01";
+      };
+      th-abstraction = {
+        version = "0.4.5.0";
+        hash = "19nh7a9b4yif6sijp6xns6xlxcr1mcyrqx3cfbp5bdm7mkbda7a9";
+      };
+      type-errors = {
+        version = "0.2.0.2";
+        hash = "09rkyqhx8jnzqiq7gpcm5jd1xd435h0ma0b2sff18lk31qv01x6g";
       };
     };
   };

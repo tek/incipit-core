@@ -100,7 +100,7 @@ library
       NoFieldSelectors
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
-      base >=4.16.4.0 && <4.22
+      base >=4.17.2.1 && <4.22
     , incipit-base ==0.6.1.0
-    , polysemy >=1.6.0.0 && <1.10
+    , polysemy >=1.8.0.0 && <1.10
   default-language: GHC2021
