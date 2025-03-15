@@ -13,7 +13,7 @@ homepage:       https://github.com/tek/incipit-core#readme
 bug-reports:    https://github.com/tek/incipit-core/issues
 author:         Torsten Schmits
 maintainer:     hackage@tryp.io
-copyright:      2023 Torsten Schmits
+copyright:      2025 Torsten Schmits
 license:        BSD-2-Clause-Patent
 license-file:   LICENSE
 build-type:     Simple
@@ -100,7 +100,7 @@ library
       NoFieldSelectors
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
-      base >=4.16.4.0 && <4.21
+      base >=4.16.4.0 && <4.22
     , incipit-base ==0.6.1.0
     , polysemy >=1.6.0.0 && <1.10
   default-language: GHC2021

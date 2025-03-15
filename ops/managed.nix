@@ -3,7 +3,7 @@
     incipit-base = {
       base = {
         lower = "4.16.4.0";
-        upper = "4.20";
+        upper = "4.22";
       };
       bytestring = {
         lower = "0.11.1.0";
@@ -29,7 +29,7 @@
     incipit-core = {
       base = {
         lower = "4.16.4.0";
-        upper = "4.20";
+        upper = "4.22";
       };
       polysemy = {
         lower = "1.6.0.0";
@@ -39,7 +39,7 @@
   };
   versions = {
     latest-incipit-base = {
-      base = "4.19.2.0";
+      base = "4.21.0.0";
       bytestring = "0.12.2.0";
       containers = "0.8";
       data-default = "0.8.0.0";
@@ -47,7 +47,7 @@
       text = "2.1.2";
     };
     latest-incipit-core = {
-      base = "4.19.2.0";
+      base = "4.21.0.0";
       polysemy = "1.9.2.0";
     };
     lower-incipit-base = {
@@ -82,10 +82,6 @@
       binary = {
         version = "0.8.9.2";
         hash = "04ki6paqf2hxqd5mr2rgd01mqvd1klg086hy5mmbs5aslniwa3hz";
-      };
-      bytestring = {
-        version = "0.12.2.0";
-        hash = "1b8nb46ylwi1nxcnvpncm47dw3x91l3avc7za4c6x9snaz1q84kc";
       };
       containers = {
         version = "0.8";

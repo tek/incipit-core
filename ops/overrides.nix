@@ -3,6 +3,30 @@ dev = {
 };
 ghc910 = {
 };
+ghc912 = {
+  th-abstraction = {
+  meta = {
+    sha256 = "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
+    ver = "0.7.1.0";
+  };
+  drv = { mkDerivation, base, containers, ghc-prim, lib, template-haskell
+}:
+mkDerivation {
+  pname = "th-abstraction";
+  version = "0.7.1.0";
+  src = /nix/store/d2zwzbkknm40lfy26dkpyjspg8l99lv1-source;
+  libraryHaskellDepends = [
+    base containers ghc-prim template-haskell
+  ];
+  testHaskellDepends = [ base containers template-haskell ];
+  homepage = "https://github.com/glguy/th-abstraction";
+  description = "Nicer interface for reified information about data types";
+  license = lib.licenses.isc;
+}
+;
+}
+;
+};
 ghc94 = {
 };
 ghc96 = {
@@ -40,32 +64,6 @@ mkDerivation {
   ];
   homepage = "https://github.com/kolmodin/binary";
   description = "Binary serialisation for Haskell values using lazy ByteStrings";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-  bytestring = {
-  meta = {
-    sha256 = "1b8nb46ylwi1nxcnvpncm47dw3x91l3avc7za4c6x9snaz1q84kc";
-    ver = "0.12.2.0";
-  };
-  drv = { mkDerivation, base, deepseq, ghc-prim, lib, QuickCheck, random
-, syb, tasty, tasty-bench, tasty-quickcheck, template-haskell
-, transformers
-}:
-mkDerivation {
-  pname = "bytestring";
-  version = "0.12.2.0";
-  src = /nix/store/mkwx4bd9732y4y54qkg1gsv2zj7khkd4-source;
-  libraryHaskellDepends = [ base deepseq ghc-prim template-haskell ];
-  testHaskellDepends = [
-    base deepseq QuickCheck syb tasty tasty-quickcheck template-haskell
-    transformers
-  ];
-  benchmarkHaskellDepends = [ base deepseq random tasty-bench ];
-  homepage = "https://github.com/haskell/bytestring";
-  description = "Fast, compact, strict and lazy byte strings with a list interface";
   license = lib.licenses.bsd3;
 }
 ;
@@ -147,16 +145,16 @@ mkDerivation {
 latest-incipit-core = {
   cabal-doctest = {
   meta = {
-    sha256 = "0irxfxy1qw7sif4408xdhqycddb4hs3hcf6xfxm65glsnmnmwl2i";
-    ver = "1.0.9";
+    sha256 = "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
+    ver = "1.0.11";
   };
   drv = { mkDerivation, base, Cabal, directory, filepath, lib }:
 mkDerivation {
   pname = "cabal-doctest";
-  version = "1.0.9";
-  src = /nix/store/zvv4lgrqgjx826ryk6697617pd3xpr7s-source;
+  version = "1.0.11";
+  src = /nix/store/jq5gnm6hwmylv7wndgd4v11z6hv30y0g-source;
   libraryHaskellDepends = [ base Cabal directory filepath ];
-  homepage = "https://github.com/haskellari/cabal-doctest";
+  homepage = "https://github.com/ulidtko/cabal-doctest";
   description = "A Setup.hs helper for running doctests";
   license = lib.licenses.bsd3;
 }
@@ -286,6 +284,28 @@ mkDerivation {
   libraryHaskellDepends = [ base ];
   description = "locale library";
   license = lib.licenses.bsd3;
+}
+;
+}
+;
+  th-abstraction = {
+  meta = {
+    sha256 = "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
+    ver = "0.7.1.0";
+  };
+  drv = { mkDerivation, base, containers, ghc-prim, lib, template-haskell
+}:
+mkDerivation {
+  pname = "th-abstraction";
+  version = "0.7.1.0";
+  src = /nix/store/d2zwzbkknm40lfy26dkpyjspg8l99lv1-source;
+  libraryHaskellDepends = [
+    base containers ghc-prim template-haskell
+  ];
+  testHaskellDepends = [ base containers template-haskell ];
+  homepage = "https://github.com/glguy/th-abstraction";
+  description = "Nicer interface for reified information about data types";
+  license = lib.licenses.isc;
 }
 ;
 }

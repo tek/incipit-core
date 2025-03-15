@@ -4,18 +4,45 @@
   inputs.hix.url = "git+https://git.tryp.io/tek/hix";
 
   outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
-    ghcVersions = ["ghc94" "ghc96" "ghc98" "ghc910"];
+
+    ghcVersions = ["ghc94" "ghc96" "ghc98" "ghc910" "ghc912"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
     gen-overrides.enable = true;
-    managed = {
-      enable = true;
-      sets = "each";
-      lower.enable = true;
-      latest.compiler = "ghc98";
-      forceBounds = {
-        base.upper = "4.21";
+
+    packages.incipit-base = {
+      src = ./packages/incipit-base;
+
+      cabal.meta.synopsis = "A Prelude for Polysemy – Base Reexports";
+      rootModule = "IncipitBase";
+
+      library = {
+        enable = true;
+        dependencies = [
+          "bytestring"
+          "containers"
+          "data-default"
+          "stm"
+          "text"
+        ];
       };
+
+    };
+
+    packages.incipit-core = {
+      src = ./packages/incipit-core;
+
+      cabal.meta.synopsis = "A Prelude for Polysemy";
+      rootModule = "IncipitCore";
+
+      library = {
+        enable = true;
+        dependencies = [
+          config.packages.incipit-base.dep.exact
+          "polysemy"
+        ];
+      };
+
     };
 
     cabal = {
@@ -63,39 +90,29 @@
       ];
     };
 
-    packages.incipit-base = {
-      src = ./packages/incipit-base;
-
-      cabal.meta.synopsis = "A Prelude for Polysemy – Base Reexports";
-      rootModule = "IncipitBase";
-
-      library = {
-        enable = true;
-        dependencies = [
-          "bytestring"
-          "containers"
-          "data-default"
-          "stm"
-          "text"
-        ];
+    managed = {
+      enable = true;
+      sets = "each";
+      lower.enable = true;
+      latest.compiler = "ghc912";
+      latest.envs.solverOverrides = {hackage, jailbreak, notest, ...}: {
+        doctest = jailbreak notest;
+        hashable = jailbreak;
+        th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
       };
-
     };
 
-    packages.incipit-core = {
-      src = ./packages/incipit-core;
+    envs.latest-incipit-core.overrides = {hackage, jailbreak, notest, ...}: {
+      doctest = jailbreak notest;
+      cabal-doctest = hackage "1.0.11" "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
+      hashable = jailbreak;
+      th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
+    };
 
-      cabal.meta.synopsis = "A Prelude for Polysemy";
-      rootModule = "IncipitCore";
-
-      library = {
-        enable = true;
-        dependencies = [
-          config.packages.incipit-base.dep.exact
-          "polysemy"
-        ];
-      };
-
+    envs.ghc912.overrides = {hackage, jailbreak, notest, ...}: {
+      doctest = jailbreak notest;
+      hashable = jailbreak;
+      th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
     };
 
   });
