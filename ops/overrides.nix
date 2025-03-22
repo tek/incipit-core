@@ -33,6 +33,8 @@ ghc96 = {
 };
 ghc98 = {
 };
+hix-build-tools = {
+};
 hls = {
 };
 latest-incipit-base = {
@@ -89,14 +91,14 @@ mkDerivation {
 ;
   data-default = {
   meta = {
-    sha256 = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
-    ver = "0.8.0.0";
+    sha256 = "0j7n0hc76k7h15kkr8rd788ila914zhwknvfmijlrzxzm9dvxfkf";
+    ver = "0.8.0.1";
   };
   drv = { mkDerivation, base, containers, lib, mtl }:
 mkDerivation {
   pname = "data-default";
-  version = "0.8.0.0";
-  src = /nix/store/7786mf6cf8mvaz8rm5d6539c6s3wdxsq-source;
+  version = "0.8.0.1";
+  src = /nix/store/zjfc5cy23rqzf6hmbp722p24icfwn9pr-source;
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";

@@ -42,7 +42,7 @@
       base = "4.21.0.0";
       bytestring = "0.12.2.0";
       containers = "0.8";
-      data-default = "0.8.0.0";
+      data-default = "0.8.0.1";
       stm = "2.5.3.1";
       text = "2.1.2";
     };
@@ -88,8 +88,8 @@
         hash = "06mmyljfj41hg5rzr9d2fb61gd2a11waicpk7dcy3hxrqvfgs8yc";
       };
       data-default = {
-        version = "0.8.0.0";
-        hash = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
+        version = "0.8.0.1";
+        hash = "0j7n0hc76k7h15kkr8rd788ila914zhwknvfmijlrzxzm9dvxfkf";
       };
       text = {
         version = "2.1.2";
