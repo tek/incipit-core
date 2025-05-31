@@ -46,6 +46,7 @@
     };
 
     cabal = {
+      language = "GHC2021";
       license = "BSD-2-Clause-Patent";
       license-file = "LICENSE";
       author = "Torsten Schmits";
