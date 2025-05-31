@@ -1,18 +1,23 @@
 name: lower-optimize
+
 on: workflow_dispatch
+
 permissions:
   contents: write
   pull-requests: write
   id-token: write
+
+env:
+  LANG: en_US.UTF-8
+
 jobs:
   lower-pr:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: DeterminateSystems/nix-installer-action@v16
+    - uses: cachix/install-nix-action@v31
       with:
-        extra-conf: |
-          access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+        github_access_token: ${{ secrets.GITHUB_TOKEN }}
     - uses: cachix/cachix-action@v14
       with:
         name: tek
