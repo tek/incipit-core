@@ -41,6 +41,7 @@ latest-incipit-base = {
   binary = {
   meta = {
     sha256 = "04ki6paqf2hxqd5mr2rgd01mqvd1klg086hy5mmbs5aslniwa3hz";
+    url = "https://hackage.haskell.org";
     ver = "0.8.9.2";
   };
   drv = { mkDerivation, array, attoparsec, base, base-orphans, bytestring
@@ -74,6 +75,7 @@ mkDerivation {
   containers = {
   meta = {
     sha256 = "06mmyljfj41hg5rzr9d2fb61gd2a11waicpk7dcy3hxrqvfgs8yc";
+    url = "https://hackage.haskell.org";
     ver = "0.8";
   };
   drv = { mkDerivation, array, base, deepseq, lib, template-haskell }:
@@ -92,6 +94,7 @@ mkDerivation {
   data-default = {
   meta = {
     sha256 = "0j7n0hc76k7h15kkr8rd788ila914zhwknvfmijlrzxzm9dvxfkf";
+    url = "https://hackage.haskell.org";
     ver = "0.8.0.1";
   };
   drv = { mkDerivation, base, containers, lib, mtl }:
@@ -110,6 +113,7 @@ mkDerivation {
   text = {
   meta = {
     sha256 = "0anpr011ga34ggsa4v4xfip5mgbgwr2nfdqsdciz71scgcxbr87g";
+    url = "https://hackage.haskell.org";
     ver = "2.1.2";
   };
   drv = { mkDerivation, array, base, binary, bytestring, containers
@@ -166,6 +170,7 @@ mkDerivation {
   data-default = {
   meta = {
     sha256 = "1xgz38npsa80inh49hkii7pfwbrm9fbbbksipi8bd6p100gx4m8c";
+    url = "https://hackage.haskell.org";
     ver = "0.7.1.1";
   };
   drv = { mkDerivation, base, data-default-class
@@ -189,6 +194,7 @@ mkDerivation {
   data-default-class = {
   meta = {
     sha256 = "17dslsh6p6wmyh12fk04vvp3pqb4q2ybdz8g7qnzm8xc03naryhd";
+    url = "https://hackage.haskell.org";
     ver = "0.1.2.0";
   };
   drv = { mkDerivation, base, lib }:
@@ -206,6 +212,7 @@ mkDerivation {
   data-default-instances-containers = {
   meta = {
     sha256 = "08m81yh6g2lnxxii67pw6qgb685vypadk4ijlpxgwpvjympn7568";
+    url = "https://hackage.haskell.org";
     ver = "0.0.1";
   };
   drv = { mkDerivation, base, containers, data-default-class, lib }:
@@ -223,6 +230,7 @@ mkDerivation {
   data-default-instances-dlist = {
   meta = {
     sha256 = "073v298k2j6qgkkmmh6p9l40nhmbcxniyd3s9w4ymh7cdxwwz39l";
+    url = "https://hackage.haskell.org";
     ver = "0.0.1";
   };
   drv = { mkDerivation, base, data-default-class, dlist, lib }:
@@ -240,6 +248,7 @@ mkDerivation {
   data-default-instances-old-locale = {
   meta = {
     sha256 = "163d6jsfd24g51wn87dpkdzwp7qjciqb5yapm4wv4j7rdazbgpmm";
+    url = "https://hackage.haskell.org";
     ver = "0.0.1";
   };
   drv = { mkDerivation, base, data-default-class, lib, old-locale }:
@@ -257,6 +266,7 @@ mkDerivation {
   dlist = {
   meta = {
     sha256 = "1lhckd8srlbjh17krqx0xkp10r9ipwc9lhlwrzxihkdwzsk0as0g";
+    url = "https://hackage.haskell.org";
     ver = "1.0";
   };
   drv = { mkDerivation, base, deepseq, lib, QuickCheck }:
@@ -273,9 +283,64 @@ mkDerivation {
 ;
 }
 ;
+  hashable = {
+  meta = {
+    sha256 = "0a8jcfmak3b130x5xim4d6qsqmfp8779wvq5va9irncn6827ihzi";
+    url = "https://hackage.haskell.org";
+    ver = "1.4.4.0";
+  };
+  drv = { mkDerivation, base, bytestring, containers, deepseq, filepath
+, ghc-bignum, ghc-prim, HUnit, lib, os-string, QuickCheck, random
+, test-framework, test-framework-hunit, test-framework-quickcheck2
+, text, unix
+}:
+mkDerivation {
+  pname = "hashable";
+  version = "1.4.4.0";
+  src = /nix/store/84yi2sv3xcy5xkb55sqjrgyq2cgabiml-source;
+  libraryHaskellDepends = [
+    base bytestring containers deepseq filepath ghc-bignum ghc-prim
+    os-string text
+  ];
+  testHaskellDepends = [
+    base bytestring filepath ghc-prim HUnit os-string QuickCheck random
+    test-framework test-framework-hunit test-framework-quickcheck2 text
+    unix
+  ];
+  homepage = "http://github.com/haskell-unordered-containers/hashable";
+  description = "A class for types that can be converted to a hash value";
+  license = lib.licenses.bsd3;
+}
+;
+}
+;
+  incipit-base = {
+  meta = {
+    sha256 = "08ybv7j94yyznrxnrh744bi3i1a00sz8bf5ddfs9vfgfhhkrg8fn";
+    url = "https://hackage.haskell.org";
+    ver = "0.6.1.1";
+  };
+  drv = { mkDerivation, base, bytestring, containers, data-default, lib
+, stm, text
+}:
+mkDerivation {
+  pname = "incipit-base";
+  version = "0.6.1.1";
+  src = /nix/store/z2v8hbdbz6fvdnnqfdr713164wc7n3jj-source;
+  libraryHaskellDepends = [
+    base bytestring containers data-default stm text
+  ];
+  homepage = "https://github.com/tek/incipit-core#readme";
+  description = "A Prelude for Polysemy – Base Reexports";
+  license = "BSD-2-Clause-Patent";
+}
+;
+}
+;
   old-locale = {
   meta = {
     sha256 = "0gkq0gmdqfhb7xvb52hqpp79iz9wxk4kprvqdpwlds8a2i2flqm3";
+    url = "https://hackage.haskell.org";
     ver = "1.0.0.7";
   };
   drv = { mkDerivation, base, lib }:
@@ -290,9 +355,43 @@ mkDerivation {
 ;
 }
 ;
+  polysemy = {
+  meta = {
+    sha256 = "00dq1ffsd9bld5zag4l2qssbmm4yb234cirsn5f19fmx43cdgngl";
+    url = "https://hackage.haskell.org";
+    ver = "1.9.2.0";
+  };
+  drv = { mkDerivation, async, base, Cabal, cabal-doctest, containers
+, doctest, first-class-families, hspec, hspec-discover
+, inspection-testing, lib, mtl, stm, syb, template-haskell
+, th-abstraction, transformers, type-errors, unagi-chan
+}:
+mkDerivation {
+  pname = "polysemy";
+  version = "1.9.2.0";
+  src = /nix/store/rrd35xyn2gzkvqid5k43dsqw5z0yb21d-source;
+  setupHaskellDepends = [ base Cabal cabal-doctest ];
+  libraryHaskellDepends = [
+    async base containers first-class-families mtl stm syb
+    template-haskell th-abstraction transformers type-errors unagi-chan
+  ];
+  testHaskellDepends = [
+    async base containers doctest first-class-families hspec
+    hspec-discover inspection-testing mtl stm syb template-haskell
+    th-abstraction transformers type-errors unagi-chan
+  ];
+  testToolDepends = [ hspec-discover ];
+  homepage = "https://github.com/polysemy-research/polysemy#readme";
+  description = "Higher-order, low-boilerplate free monads";
+  license = lib.licenses.bsd3;
+}
+;
+}
+;
   th-abstraction = {
   meta = {
     sha256 = "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
+    url = "https://hackage.haskell.org";
     ver = "0.7.1.0";
   };
   drv = { mkDerivation, base, containers, ghc-prim, lib, template-haskell
@@ -308,6 +407,33 @@ mkDerivation {
   homepage = "https://github.com/glguy/th-abstraction";
   description = "Nicer interface for reified information about data types";
   license = lib.licenses.isc;
+}
+;
+}
+;
+  type-errors = {
+  meta = {
+    sha256 = "09rkyqhx8jnzqiq7gpcm5jd1xd435h0ma0b2sff18lk31qv01x6g";
+    url = "https://hackage.haskell.org";
+    ver = "0.2.0.2";
+  };
+  drv = { mkDerivation, base, doctest, first-class-families, lib, syb
+, template-haskell, th-abstraction
+}:
+mkDerivation {
+  pname = "type-errors";
+  version = "0.2.0.2";
+  src = /nix/store/kiz1m5rj1riyf995rgipyr4g9g8xlnni-source;
+  libraryHaskellDepends = [
+    base first-class-families syb template-haskell th-abstraction
+  ];
+  testHaskellDepends = [
+    base doctest first-class-families syb template-haskell
+    th-abstraction
+  ];
+  homepage = "https://github.com/isovector/type-errors#readme";
+  description = "Tools for writing better type errors";
+  license = lib.licenses.bsd3;
 }
 ;
 }
