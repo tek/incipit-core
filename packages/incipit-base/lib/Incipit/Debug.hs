@@ -6,19 +6,18 @@ module Incipit.Debug where
 import qualified Data.Text as Text
 import Data.Text (Text)
 import GHC.Stack (CallStack, SrcLoc (..), callStack, getCallStack)
+import System.IO (IO, hPutStrLn, stderr)
 import System.IO.Unsafe (unsafePerformIO)
 
 import Incipit.Base (
   Applicative (pure),
   Functor ((<$)),
   HasCallStack,
-  IO,
   Monad,
   Semigroup ((<>)),
   Show,
   error,
   fromMaybe,
-  putStrLn,
   )
 import Incipit.List (last)
 import Incipit.String.Conversion (ToString (toString), ToText (toText), show)
@@ -33,7 +32,7 @@ debugPrint ::
   Text ->
   IO ()
 debugPrint SrcLoc {srcLocModule = (toText -> slm), srcLocStartLine} !msg =
-  putStrLn (toString moduleName <> ":" <> show srcLocStartLine <> " " <> toString msg)
+  hPutStrLn stderr (toString moduleName <> ":" <> show srcLocStartLine <> " " <> toString msg)
   where
     moduleName =
       fromMaybe slm (last (Text.splitOn "." slm))
