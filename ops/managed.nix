@@ -32,7 +32,7 @@
         upper = "4.22";
       };
       incipit-base = {
-        lower = null;
+        lower = "0.4.0.0";
         upper = "0.7";
       };
       polysemy = {
@@ -65,6 +65,7 @@
     };
     lower-incipit-core = {
       base = "4.17.2.1";
+      incipit-base = "0.4.0.0";
       polysemy = "1.8.0.0";
     };
   };
@@ -79,6 +80,7 @@
       text = "2.1";
     };
     lower-incipit-core = {
+      incipit-base = "0.6.0.0";
       polysemy = "1.9.0.0";
     };
   };
@@ -199,22 +201,32 @@
       cabal-doctest = {
         version = "1.0.11";
         hash = "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
+        repo = "hackage.haskell.org";
       };
       data-default = {
-        version = "0.8.0.0";
-        hash = "12yv9vwmd31dd880k6lc4wvlin4s4p0n8ra9838zzcn27faqdf4a";
+        version = "0.8.0.1";
+        hash = "0j7n0hc76k7h15kkr8rd788ila914zhwknvfmijlrzxzm9dvxfkf";
+        repo = "hackage.haskell.org";
+      };
+      incipit-base = {
+        version = "0.4.0.0";
+        hash = "0g04mw1si70g5kkgz9gnk460d4pvm65i30hd9abrg6g0ryizixqf";
+        repo = "hackage.haskell.org";
       };
       polysemy = {
         version = "1.8.0.0";
         hash = "0jgaqmcf4l8h58g1y576rrr74sii60mymqxh3ii3clnxcllp3p01";
+        repo = "hackage.haskell.org";
       };
       th-abstraction = {
         version = "0.4.5.0";
         hash = "19nh7a9b4yif6sijp6xns6xlxcr1mcyrqx3cfbp5bdm7mkbda7a9";
+        repo = "hackage.haskell.org";
       };
       type-errors = {
         version = "0.2.0.2";
         hash = "09rkyqhx8jnzqiq7gpcm5jd1xd435h0ma0b2sff18lk31qv01x6g";
+        repo = "hackage.haskell.org";
       };
     };
   };
@@ -250,6 +262,8 @@
         repo = "hackage.haskell.org";
       };
     };
+    lower-incipit-base = {};
+    lower-incipit-core = {};
   };
   resolving = false;
 }
