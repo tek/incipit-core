@@ -101,6 +101,6 @@ library
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
       base >=4.17.2.1 && <4.22
-    , incipit-base >=0.4.0.0 && <0.7
+    , incipit-base ==0.7.0.0
     , polysemy >=1.8.0.0 && <1.10
   default-language: GHC2021
