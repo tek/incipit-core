@@ -5,7 +5,7 @@
 
   outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
 
-    ghcVersions = ["ghc94" "ghc96" "ghc98" "ghc910" "ghc912"];
+    ghcVersions = ["ghc94" "ghc96" "ghc98" "ghc910"];
     main = "incipit-core";
     hackage.versionFile = "ops/version.nix";
     gen-overrides.enable = true;
@@ -100,12 +100,6 @@
 
     envs.latest-incipit-core.overrides = {hackage, jailbreak, notest, ...}: {
       cabal-doctest = hackage "1.0.11" "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
-    };
-
-    envs.ghc912.overrides = {hackage, jailbreak, notest, ...}: {
-      doctest = jailbreak notest;
-      hashable = jailbreak;
-      th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
     };
 
     internal.hixCli.dev = true;

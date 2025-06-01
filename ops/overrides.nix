@@ -3,30 +3,6 @@ dev = {
 };
 ghc910 = {
 };
-ghc912 = {
-  th-abstraction = {
-  meta = {
-    sha256 = "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
-    ver = "0.7.1.0";
-  };
-  drv = { mkDerivation, base, containers, ghc-prim, lib, template-haskell
-}:
-mkDerivation {
-  pname = "th-abstraction";
-  version = "0.7.1.0";
-  src = /nix/store/d2zwzbkknm40lfy26dkpyjspg8l99lv1-source;
-  libraryHaskellDepends = [
-    base containers ghc-prim template-haskell
-  ];
-  testHaskellDepends = [ base containers template-haskell ];
-  homepage = "https://github.com/glguy/th-abstraction";
-  description = "Nicer interface for reified information about data types";
-  license = lib.licenses.isc;
-}
-;
-}
-;
-};
 ghc94 = {
 };
 ghc96 = {
