@@ -96,18 +96,10 @@
       sets = "each";
       lower.enable = true;
       latest.compiler = "ghc912";
-      latest.envs.solverOverrides = {hackage, jailbreak, notest, ...}: {
-        doctest = jailbreak notest;
-        hashable = jailbreak;
-        th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
-      };
     };
 
     envs.latest-incipit-core.overrides = {hackage, jailbreak, notest, ...}: {
-      doctest = jailbreak notest;
       cabal-doctest = hackage "1.0.11" "152rqpicqpvigjpy4rf1kjlwny1c7ys1r0r123wdjafvv1igflii";
-      hashable = jailbreak;
-      th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
     };
 
     envs.ghc912.overrides = {hackage, jailbreak, notest, ...}: {
@@ -115,6 +107,8 @@
       hashable = jailbreak;
       th-abstraction = hackage "0.7.1.0" "09wr7x9bpzyrys8id1mavk9wvqhh2smxdkfwi82kpcycm7a1z7sx";
     };
+
+    internal.hixCli.dev = true;
 
   });
 }
