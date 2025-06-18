@@ -6,7 +6,7 @@ module Incipit.Foldable (
 
 import qualified Data.Foldable as Foldable
 import Data.Foldable (
-  Foldable (elem, fold, foldMap, foldMap', foldl', foldl1, foldr, foldr', foldr1, length, null, product, sum, toList),
+  Foldable (elem, fold, foldMap, foldMap', foldl, foldl', foldl1, foldr, foldr', foldr1, length, null, product, sum, toList),
   all,
   and,
   any,
@@ -25,18 +25,6 @@ import Data.Foldable (
   )
 import Data.Maybe (Maybe (Just, Nothing))
 import Data.Ord (Ord, Ordering)
-
--- |Default to using the strict version since the lazy one is so controversial.
-foldl ::
-  ∀ t b a .
-  Foldable t =>
-  (b -> a -> b) ->
-  b ->
-  t a ->
-  b
-foldl =
-  Foldable.foldl'
-{-# inlineable foldl #-}
 
 -- |Safe version of 'Foldable.minimum'.
 minimum ::
