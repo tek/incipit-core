@@ -46,7 +46,7 @@
       base = "4.21.0.0";
       bytestring = "0.12.2.0";
       containers = "0.8";
-      data-default = "0.8.0.1";
+      data-default = "0.8.0.2";
       stm = "2.5.3.1";
       text = "2.1.3";
     };
@@ -97,8 +97,8 @@
         repo = "hackage.haskell.org";
       };
       data-default = {
-        version = "0.8.0.1";
-        hash = "0j7n0hc76k7h15kkr8rd788ila914zhwknvfmijlrzxzm9dvxfkf";
+        version = "0.8.0.2";
+        hash = "1pkiv20n0n4psxgjmiyzqyb3vzmsmlj2wf3vli3dhz8amxmrsy5v";
         repo = "hackage.haskell.org";
       };
       text = {

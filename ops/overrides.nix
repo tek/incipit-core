@@ -69,15 +69,15 @@ mkDerivation {
 ;
   data-default = {
   meta = {
-    sha256 = "0j7n0hc76k7h15kkr8rd788ila914zhwknvfmijlrzxzm9dvxfkf";
+    sha256 = "1pkiv20n0n4psxgjmiyzqyb3vzmsmlj2wf3vli3dhz8amxmrsy5v";
     url = "https://hackage.haskell.org";
-    ver = "0.8.0.1";
+    ver = "0.8.0.2";
   };
   drv = { mkDerivation, base, containers, lib, mtl }:
 mkDerivation {
   pname = "data-default";
-  version = "0.8.0.1";
-  src = /nix/store/zjfc5cy23rqzf6hmbp722p24icfwn9pr-source;
+  version = "0.8.0.2";
+  src = /nix/store/yx86jpg4lcqzb22882w8mvw5skyd8fzd-source;
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";
