@@ -48,7 +48,7 @@
       containers = "0.8";
       data-default = "0.8.0.2";
       stm = "2.5.3.1";
-      text = "2.1.3";
+      text = "2.1.4";
     };
     latest-incipit-core = {
       base = "4.21.0.0";
@@ -102,8 +102,8 @@
         repo = "hackage.haskell.org";
       };
       text = {
-        version = "2.1.3";
-        hash = "1wwbsjp63s0g0cb57rrgracvkjnsymcjsxwgfm6waw3dgczi3qpc";
+        version = "2.1.4";
+        hash = "1rdjjanxj5pr5y73h7bss3lh0x8w9yml9kzir4amlh1sxqlf17rd";
         repo = "hackage.haskell.org";
       };
     };
