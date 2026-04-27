@@ -29,5 +29,5 @@ init = \case
 tail :: [a] -> Maybe [a]
 tail = \case
   [] -> Nothing
-  as -> Just (List.tail as)
+  _ : as -> Just as
 {-# inline tail #-}
