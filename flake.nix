@@ -7,7 +7,6 @@
 
     ghcVersions = ["ghc98" "ghc910" "ghc912"];
     main = "incipit-core";
-    release.versionFile = "ops/version.nix";
     gen-overrides.enable = true;
 
     packages.incipit-base = {
