@@ -98,6 +98,10 @@
       latest.compiler = "ghc912";
     };
 
+    hackage.repos."hackage.haskell.org" = {
+      user = "tek";
+    };
+
     internal.hixCli.dev = true;
 
   });
