@@ -113,9 +113,9 @@ library
       ViewPatterns
   ghc-options: -Wall -Widentities -Wincomplete-uni-patterns -Wmissing-deriving-strategies -Wredundant-constraints -Wunused-type-patterns -Wunused-packages
   build-depends:
-      base >=4.18.3.0 && <4.22
+      base >=4.17.2.1 && <4.22
     , bytestring >=0.11.1.0 && <0.13
-    , containers >=0.6.5.1 && <0.9
+    , containers >=0.6.3.1 && <0.9
     , data-default >=0.2 && <0.9
     , stm >=2.5.1.0 && <2.6
     , text >=2.0.2 && <2.2

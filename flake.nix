@@ -5,7 +5,7 @@
 
   outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
 
-    ghcVersions = ["ghc96" "ghc98" "ghc910" "ghc912"];
+    ghcVersions = ["ghc98" "ghc910" "ghc912"];
     main = "incipit-core";
     release.versionFile = "ops/version.nix";
     gen-overrides.enable = true;
@@ -96,6 +96,7 @@
       sets = "each";
       lower.enable = true;
       latest.compiler = "ghc912";
+      lower.compiler = "ghc94";
     };
 
     hackage.repos."hackage.haskell.org" = {
