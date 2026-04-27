@@ -33,7 +33,7 @@
       };
       incipit-base = {
         lower = "0.5.1.0";
-        upper = "0.7";
+        upper = "0.8";
       };
       polysemy = {
         lower = "1.9.1.0";
@@ -264,6 +264,13 @@
     lower-incipit-base = {};
     lower-incipit-core = {};
   };
-  packages = {};
+  packages = {
+    incipit-base = {
+      version = "0.7.0.0";
+    };
+    incipit-core = {
+      version = "0.7.0.0";
+    };
+  };
   resolving = false;
 }
