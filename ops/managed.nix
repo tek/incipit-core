@@ -52,7 +52,7 @@
     };
     latest-incipit-core = {
       base = "4.21.0.0";
-      incipit-base = "0.6.1.1";
+      incipit-base = "0.7.0.1";
       polysemy = "1.9.2.0";
     };
     lower-incipit-base = {
@@ -119,8 +119,8 @@
         repo = "hackage.haskell.org";
       };
       incipit-base = {
-        version = "0.6.1.1";
-        hash = "08ybv7j94yyznrxnrh744bi3i1a00sz8bf5ddfs9vfgfhhkrg8fn";
+        version = "0.7.0.1";
+        hash = "18qja8s9cs1h8z5yxccv5sjzpf32jgmvk7x1ywqybdkysj65zs7y";
         repo = "hackage.haskell.org";
       };
       polysemy = {
