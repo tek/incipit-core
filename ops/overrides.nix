@@ -151,17 +151,17 @@ mkDerivation {
 ;
     incipit-base = {
   meta = {
-    sha256 = "08ybv7j94yyznrxnrh744bi3i1a00sz8bf5ddfs9vfgfhhkrg8fn";
+    sha256 = "18qja8s9cs1h8z5yxccv5sjzpf32jgmvk7x1ywqybdkysj65zs7y";
     url = "https://hackage.haskell.org";
-    ver = "0.6.1.1";
+    ver = "0.7.0.1";
   };
   drv = { mkDerivation, base, bytestring, containers, data-default, lib
 , stm, text
 }:
 mkDerivation {
   pname = "incipit-base";
-  version = "0.6.1.1";
-  src = /nix/store/z2v8hbdbz6fvdnnqfdr713164wc7n3jj-source;
+  version = "0.7.0.1";
+  src = /nix/store/fcrsvy8ijidyam0vfib5pfxkig6yhchn-source;
   libraryHaskellDepends = [
     base bytestring containers data-default stm text
   ];
