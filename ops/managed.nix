@@ -275,10 +275,10 @@
   };
   packages = {
     incipit-base = {
-      version = "0.7.0.1";
+      version = "0.7.0.2";
     };
     incipit-core = {
-      version = "0.7.0.1";
+      version = "0.7.0.2";
     };
   };
   resolving = false;
