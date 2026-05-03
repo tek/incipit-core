@@ -2,10 +2,11 @@
   description = "A Prelude for Polysemy";
 
   inputs.hix.url = "git+https://git.tryp.io/tek/hix";
+  inputs.hix.inputs.nixpkgs.url = "github:nixos/nixpkgs/15f4ee454b1dce334612fa6843b3e05cf546efab";
 
   outputs = {hix, ...}: hix.lib.pro ({config, ...}: {
 
-    ghcVersions = ["ghc98" "ghc910" "ghc912"];
+    ghcVersions = ["ghc98" "ghc910" "ghc912" "ghc914"];
     main = "incipit-core";
     gen-overrides.enable = true;
 
@@ -96,6 +97,10 @@
       lower.enable = true;
       latest.compiler = "ghc912";
       lower.compiler = "ghc94";
+    };
+
+    package-sets.ghc914.overrides = {jailbreak, ...}: {
+      polysemy = jailbreak;
     };
 
     hackage.repos."hackage.haskell.org" = {

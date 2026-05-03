@@ -3,7 +3,7 @@
     incipit-base = {
       base = {
         lower = "4.17.2.1";
-        upper = "4.22";
+        upper = "4.23";
       };
       bytestring = {
         lower = "0.11.1.0";
@@ -29,7 +29,7 @@
     incipit-core = {
       base = {
         lower = "4.17.2.1";
-        upper = "4.22";
+        upper = "4.23";
       };
       incipit-base = {
         lower = "0.4.0.0";
@@ -167,6 +167,12 @@
       };
     };
     lower-incipit-core = {
+      ChasingBottoms = {
+        version = "1.3.1.17";
+        hash = "1wnh5s823z48vg6bah5j7q5praywd7syx7p13vrv1z02ri9fhsjp";
+        repo = "hackage.haskell.org";
+        revision = true;
+      };
       QuickCheck = {
         version = "2.18.0.0";
         hash = "0f7az7aa9fswrjzdh8m0gphgsf1p2nxgdxs69xlgivhwm33hqywr";
@@ -194,8 +200,8 @@
         revision = true;
       };
       os-string = {
-        version = "2.0.8";
-        hash = "1i3qmgqa2wyri8fyyhw2z6jfwrapd5x41gr29dmcn6ikfixaf9z5";
+        version = "2.0.10";
+        hash = "0v5y53q7j77b4r1b237bm7i6chmcapxa9748a2qpmfy6yh77hq5f";
         repo = "hackage.haskell.org";
         revision = true;
       };
@@ -214,12 +220,6 @@
         hash = "035dn7n793ikw0k9ikmjs71s1idi9c4da1p7b9m3z2bkfcxpwy79";
         repo = "hackage.haskell.org";
       };
-      tasty-quickcheck = {
-        version = "0.11.1";
-        hash = "0lwg7bvxmnyjhazhd0566a9x1cw0fm6nky9dna7lmsmdbk1c37r6";
-        repo = "hackage.haskell.org";
-        revision = true;
-      };
       th-abstraction = {
         version = "0.4.5.0";
         hash = "19nh7a9b4yif6sijp6xns6xlxcr1mcyrqx3cfbp5bdm7mkbda7a9";
@@ -229,6 +229,12 @@
         version = "0.2.0.2";
         hash = "09rkyqhx8jnzqiq7gpcm5jd1xd435h0ma0b2sff18lk31qv01x6g";
         repo = "hackage.haskell.org";
+      };
+      vector = {
+        version = "0.13.2.0";
+        hash = "0mgc7ikhdgqwsj5skdxsf6v3a1iqkiiysqj94qnbg40ff8nbai4x";
+        repo = "hackage.haskell.org";
+        revision = true;
       };
     };
   };

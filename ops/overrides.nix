@@ -29,7 +29,7 @@ mkDerivation {
   ];
   homepage = "https://github.com/kolmodin/binary";
   description = "Binary serialisation for Haskell values using lazy ByteStrings";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -48,7 +48,7 @@ mkDerivation {
   libraryHaskellDepends = [ array base deepseq template-haskell ];
   homepage = "https://github.com/haskell/containers";
   description = "Assorted concrete container types";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -67,7 +67,7 @@ mkDerivation {
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -104,7 +104,7 @@ mkDerivation {
   doCheck = false;
   homepage = "https://github.com/haskell/text";
   description = "An efficient packed Unicode text type";
-  license = lib.licenses.bsd2;
+  license = lib.licensesSpdx."BSD-2-Clause";
 }
 ;
 }
@@ -144,7 +144,7 @@ mkDerivation {
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -167,7 +167,7 @@ mkDerivation {
   ];
   homepage = "https://github.com/tek/incipit-core#readme";
   description = "A Prelude for Polysemy – Base Reexports";
-  license = "BSD-2-Clause-Patent";
+  license = lib.licensesSpdx."BSD-2-Clause-Patent";
 }
 ;
 }
@@ -283,7 +283,7 @@ mkDerivation {
   ];
   homepage = "https://github.com/kolmodin/binary";
   description = "Binary serialisation for Haskell values using lazy ByteStrings";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -385,13 +385,38 @@ mkDerivation {
   doCheck = false;
   homepage = "https://github.com/haskell/text";
   description = "An efficient packed Unicode text type";
-  license = lib.licenses.bsd2;
+  license = lib.licensesSpdx."BSD-2-Clause";
 }
 ;
 }
 ;
   };
   lower-incipit-core = {
+    ChasingBottoms = {
+  meta = {
+    sha256 = "1wnh5s823z48vg6bah5j7q5praywd7syx7p13vrv1z02ri9fhsjp";
+    url = "https://hackage.haskell.org";
+    ver = "1.3.1.17";
+  };
+  drv = { mkDerivation, array, base, containers, lib, mtl, QuickCheck
+, random, syb
+}:
+mkDerivation {
+  pname = "ChasingBottoms";
+  version = "1.3.1.17";
+  src = /nix/store/l39vypnzi7sfl4dyycl7k5cn0qqsjs0h-source;
+  libraryHaskellDepends = [
+    base containers mtl QuickCheck random syb
+  ];
+  testHaskellDepends = [
+    array base containers mtl QuickCheck random syb
+  ];
+  description = "For testing partial and infinite values";
+  license = lib.licenses.mit;
+}
+;
+}
+;
     QuickCheck = {
   meta = {
     sha256 = "0f7az7aa9fswrjzdh8m0gphgsf1p2nxgdxs69xlgivhwm33hqywr";
@@ -453,7 +478,7 @@ mkDerivation {
   libraryHaskellDepends = [ base containers ];
   testHaskellDepends = [ base containers mtl ];
   description = "A class for types with a default value";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -476,7 +501,7 @@ mkDerivation {
   ];
   homepage = "https://github.com/tek/incipit-core#readme";
   description = "A Prelude for Polysemy – Base Reexports";
-  license = "BSD-2-Clause-Patent";
+  license = lib.licensesSpdx."BSD-2-Clause-Patent";
 }
 ;
 }
@@ -509,9 +534,9 @@ mkDerivation {
 ;
     os-string = {
   meta = {
-    sha256 = "1i3qmgqa2wyri8fyyhw2z6jfwrapd5x41gr29dmcn6ikfixaf9z5";
+    sha256 = "0v5y53q7j77b4r1b237bm7i6chmcapxa9748a2qpmfy6yh77hq5f";
     url = "https://hackage.haskell.org";
-    ver = "2.0.8";
+    ver = "2.0.10";
   };
   drv = { mkDerivation, base, bytestring, deepseq, exceptions, lib
 , QuickCheck, quickcheck-classes-base, random, tasty-bench
@@ -519,8 +544,8 @@ mkDerivation {
 }:
 mkDerivation {
   pname = "os-string";
-  version = "2.0.8";
-  src = /nix/store/lqqw5l8q3bidjz0bkk7si12x22lphjw0-source;
+  version = "2.0.10";
+  src = /nix/store/qq5h88zl9c2gsrfp1v5iki7f9jhqgmq5-source;
   libraryHaskellDepends = [
     base bytestring deepseq exceptions template-haskell
   ];
@@ -532,7 +557,7 @@ mkDerivation {
   ];
   homepage = "https://github.com/haskell/os-string/blob/master/README.md";
   description = "Library for manipulating Operating system strings";
-  license = lib.licenses.bsd3;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -621,33 +646,7 @@ mkDerivation {
   libraryHaskellDepends = [ base deepseq ];
   testHaskellDepends = [ base HUnit template-haskell ];
   description = "Fast Splittable PRNG";
-  license = lib.licenses.bsd3;
-}
-;
-}
-;
-    tasty-quickcheck = {
-  meta = {
-    sha256 = "0lwg7bvxmnyjhazhd0566a9x1cw0fm6nky9dna7lmsmdbk1c37r6";
-    url = "https://hackage.haskell.org";
-    ver = "0.11.1";
-  };
-  drv = { mkDerivation, base, lib, optparse-applicative, QuickCheck, random
-, regex-tdfa, tagged, tasty, tasty-hunit
-}:
-mkDerivation {
-  pname = "tasty-quickcheck";
-  version = "0.11.1";
-  src = /nix/store/vg1vbx29fwbd4n76gbm7mdhvr04g8fbb-source;
-  libraryHaskellDepends = [
-    base optparse-applicative QuickCheck random tagged tasty
-  ];
-  testHaskellDepends = [
-    base QuickCheck regex-tdfa tasty tasty-hunit
-  ];
-  homepage = "https://github.com/UnkindPartition/tasty";
-  description = "QuickCheck support for the Tasty test framework";
-  license = lib.licenses.mit;
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
@@ -698,6 +697,38 @@ mkDerivation {
   homepage = "https://github.com/isovector/type-errors#readme";
   description = "Tools for writing better type errors";
   license = lib.licenses.bsd3;
+}
+;
+}
+;
+    vector = {
+  meta = {
+    sha256 = "0mgc7ikhdgqwsj5skdxsf6v3a1iqkiiysqj94qnbg40ff8nbai4x";
+    url = "https://hackage.haskell.org";
+    ver = "0.13.2.0";
+  };
+  drv = { mkDerivation, base, base-orphans, deepseq, doctest, lib
+, primitive, QuickCheck, random, tasty, tasty-bench, tasty-hunit
+, tasty-inspection-testing, tasty-quickcheck, template-haskell
+, transformers, vector-stream
+}:
+mkDerivation {
+  pname = "vector";
+  version = "0.13.2.0";
+  src = /nix/store/b8qdb5sk1v1vp84rjv25n82721pdgixh-source;
+  libraryHaskellDepends = [
+    base deepseq primitive random tasty vector-stream
+  ];
+  testHaskellDepends = [
+    base base-orphans doctest primitive QuickCheck random tasty
+    tasty-hunit tasty-inspection-testing tasty-quickcheck
+    template-haskell transformers
+  ];
+  benchmarkHaskellDepends = [ base random tasty tasty-bench ];
+  doHaddock = false;
+  homepage = "https://github.com/haskell/vector";
+  description = "Efficient Arrays";
+  license = lib.licensesSpdx."BSD-3-Clause";
 }
 ;
 }
