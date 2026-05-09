@@ -3,7 +3,7 @@
     incipit-base = {
       base = {
         lower = "4.17.2.1";
-        upper = "4.23";
+        upper = "4.22";
       };
       bytestring = {
         lower = "0.11.1.0";
@@ -29,7 +29,7 @@
     incipit-core = {
       base = {
         lower = "4.17.2.1";
-        upper = "4.23";
+        upper = "4.22";
       };
       incipit-base = {
         lower = "0.4.0.0";
@@ -43,7 +43,7 @@
   };
   versions = {
     latest-incipit-base = {
-      base = "4.21.0.0";
+      base = "4.21.1.0";
       bytestring = "0.12.2.0";
       containers = "0.8";
       data-default = "0.8.0.2";
@@ -51,8 +51,8 @@
       text = "2.1.4";
     };
     latest-incipit-core = {
-      base = "4.21.0.0";
-      incipit-base = "0.7.0.1";
+      base = "4.21.1.0";
+      incipit-base = "0.7.0.2";
       polysemy = "1.9.2.0";
     };
     lower-incipit-base = {
@@ -119,8 +119,8 @@
         repo = "hackage.haskell.org";
       };
       incipit-base = {
-        version = "0.7.0.1";
-        hash = "18qja8s9cs1h8z5yxccv5sjzpf32jgmvk7x1ywqybdkysj65zs7y";
+        version = "0.7.0.2";
+        hash = "0z3xvbjcb988vqz8kda4lizf9ahxzrdp76mz5igikf03463z86qv";
         repo = "hackage.haskell.org";
       };
       polysemy = {
