@@ -43,15 +43,15 @@
   };
   versions = {
     latest-incipit-base = {
-      base = "4.21.0.0";
+      base = "4.22.0.0";
       bytestring = "0.12.2.0";
-      containers = "0.8";
+      containers = "0.8.1";
       data-default = "0.8.0.2";
       stm = "2.5.3.1";
       text = "2.1.4";
     };
     latest-incipit-core = {
-      base = "4.21.0.0";
+      base = "4.22.0.0";
       incipit-base = "0.7.0.1";
       polysemy = "1.9.2.0";
     };
@@ -92,8 +92,8 @@
         repo = "hackage.haskell.org";
       };
       containers = {
-        version = "0.8";
-        hash = "06mmyljfj41hg5rzr9d2fb61gd2a11waicpk7dcy3hxrqvfgs8yc";
+        version = "0.8.1";
+        hash = "0jrbb54qc1ljjvy193dh6c2ppp562bf558s5m5j9lmibm1kdxy2l";
         repo = "hackage.haskell.org";
       };
       data-default = {
