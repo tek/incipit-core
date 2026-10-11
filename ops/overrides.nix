@@ -36,15 +36,15 @@ mkDerivation {
 ;
     containers = {
   meta = {
-    sha256 = "06mmyljfj41hg5rzr9d2fb61gd2a11waicpk7dcy3hxrqvfgs8yc";
+    sha256 = "0jrbb54qc1ljjvy193dh6c2ppp562bf558s5m5j9lmibm1kdxy2l";
     url = "https://hackage.haskell.org";
-    ver = "0.8";
+    ver = "0.8.1";
   };
   drv = { mkDerivation, array, base, deepseq, lib, template-haskell }:
 mkDerivation {
   pname = "containers";
-  version = "0.8";
-  src = /nix/store/rdycsvan59f6xwgs0z7r1k5m4qxnm8zx-source;
+  version = "0.8.1";
+  src = /nix/store/64h95fsarlfxi67133s290lm3m6yr6z7-source;
   libraryHaskellDepends = [ array base deepseq template-haskell ];
   homepage = "https://github.com/haskell/containers";
   description = "Assorted concrete container types";
