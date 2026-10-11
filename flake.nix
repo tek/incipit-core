@@ -107,6 +107,8 @@
       user = "tek";
     };
 
+    ui.experimental.managed-maint = true;
+
     internal.hixCli.dev = true;
 
   });
