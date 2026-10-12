@@ -29,7 +29,7 @@
     incipit-core = {
       base = {
         lower = "4.17.2.1";
-        upper = "4.23";
+        upper = "4.22";
       };
       incipit-base = {
         lower = "0.4.0.0";
@@ -51,7 +51,7 @@
       text = "2.1.4";
     };
     latest-incipit-core = {
-      base = "4.22.0.0";
+      base = "4.21.1.0";
       incipit-base = "0.7.0.2";
       polysemy = "1.9.2.0";
     };
