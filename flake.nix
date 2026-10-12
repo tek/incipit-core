@@ -109,5 +109,7 @@
 
     internal.hixCli.dev = true;
 
+    ui.experimental.managed-maint = true;
+
   });
 }
