@@ -3,7 +3,7 @@
     incipit-base = {
       base = {
         lower = "4.17.2.1";
-        upper = "4.23";
+        upper = "4.22";
       };
       bytestring = {
         lower = "0.11.1.0";
@@ -43,7 +43,7 @@
   };
   versions = {
     latest-incipit-base = {
-      base = "4.22.0.0";
+      base = "4.21.1.0";
       bytestring = "0.12.2.0";
       containers = "0.8.1";
       data-default = "0.8.0.2";
