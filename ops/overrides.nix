@@ -74,9 +74,9 @@ mkDerivation {
 ;
     text = {
   meta = {
-    sha256 = "1rdjjanxj5pr5y73h7bss3lh0x8w9yml9kzir4amlh1sxqlf17rd";
+    sha256 = "14ncg78rjhnl3qbim5dry2l2pl4p507bmfir44nkcz85sjnz5bql";
     url = "https://hackage.haskell.org";
-    ver = "2.1.4";
+    ver = "2.1.5";
   };
   drv = { mkDerivation, array, base, binary, bytestring, containers
 , deepseq, directory, filepath, ghc-prim, lib, QuickCheck
@@ -86,8 +86,8 @@ mkDerivation {
 }:
 mkDerivation {
   pname = "text";
-  version = "2.1.4";
-  src = /nix/store/v79vl582piarhybk65ivgrv64qf2fq3z-source;
+  version = "2.1.5";
+  src = /nix/store/f6y39wy5mn4ijc6ypq119scvw6f69bq5-source;
   libraryHaskellDepends = [
     array base binary bytestring deepseq ghc-prim system-cxx-std-lib
     template-haskell
